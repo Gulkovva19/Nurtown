@@ -15,7 +15,7 @@ html, body {
     grid-template-rows: minmax(102px, auto) 1fr minmax(417px, auto);
 	grid-template-areas:
 		"header"
-		"main"
+		"index-main"
 		"footer";
 }
 
@@ -62,8 +62,8 @@ html, body {
 }
 
 /*==MAIN================================================================*/
-.main {
-    grid-area: main;
+.index-main {
+    grid-area: index-main;
     display: grid;
     min-height: 100%;
     grid-template-columns: 1fr;
