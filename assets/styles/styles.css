@@ -8,7 +8,7 @@ html, body {
     line-height: 140%;
 }
 
-.wrapper { /*общий контейнер для того, чтобы задать структуру страницы и для того, чтобы футер был прибит к низу страницы, даже если содержания совсем мало*/
+.wrapper { /*общий контейнер для того, чтобы задать структуру страницы и для того, чтобы футер был прибит к низу страницы, даже если содержания совсем мало, ну и чтобы не появлялась вертикальная прокрутка*/
     display: grid;
     min-height: 100%;
     grid-template-columns: 1fr;
@@ -64,6 +64,54 @@ html, body {
 /*==MAIN================================================================*/
 .main {
     grid-area: main;
+    display: grid;
+    min-height: 100%;
+    grid-template-columns: 1fr;
+	grid-template-areas:
+		"intro"
+		"about"
+		"focus"
+        "projects"
+        "contact-form";
+}
+
+.intro {/*Софья, это просто, чтобы обозначить структуру, тут все можно поменять*/
+    grid-area: intro;
+	display: grid;
+    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
+    grid-template-areas:
+        ". . . .";
+}
+
+.about {/*тут тоже все можно поменять*/
+    grid-area: about;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
+    grid-template-areas:
+        ". . . .";
+}
+.focus {
+    grid-area: focus;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
+    grid-template-areas:
+        ". . . .";
+}
+
+.projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
+    grid-template-areas:
+        ". . . .";
+}
+
+.contact-form {
+    grid-area: contact-form;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
+    grid-template-areas:
+        ". . . .";
 }
 
 /*==FOOTER================================================================*/
