@@ -8,10 +8,11 @@ html, body {
     line-height: 140%;
 }
 
-.wrapper {
+.wrapper { /*общий контейнер для того, чтобы задать структуру страницы и для того, чтобы футер был прибит к низу страницы, даже если содержания совсем мало*/
     display: grid;
     min-height: 100%;
-    grid-template: minmax(102px, auto) 1fr minmax(417px, auto) / 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(102px, auto) 1fr minmax(417px, auto);
 	grid-template-areas:
 		"header"
 		"main"
@@ -21,22 +22,25 @@ html, body {
 /*==HEADER================================================================*/
 .header {
 	grid-area: header;
-    top: 0;
-	padding: 15px;
-	background-color: blueviolet; /*цвет временно для удобства*/
-	display: grid;
-	grid-template: 1fr / 1fr minmax(auto, 407px) minmax(auto, 770px) 1fr;
+	padding: 15px; /*чтобы при сжатии содержимое не прилипало к краю*/
     align-items: center;
     z-index: 99;
+	background-color: blueviolet; /*цвет временно для удобства*/
+	display: grid;
+    grid-template-columns: 1fr minmax(auto, 400px) minmax(auto, 770px) 1fr; /*чтобы меньше адаптировать: первая и последняя колонки,
+    они же "уши" - по 1fr - будут сокращаться при сжатии страницы; всем колонкам, которые между ними надо задать мин-макс
+    (первое значение -авто, сумма вторых значение =1170px = ширина основного контента)*/
+    grid-template-areas:
+        ". header__logo header__menu .";
 }
 
 .header__logo {
+    grid-area: header__logo;
     width: 70px;
-    grid-column: 2 / 3;
 }
 
 .header__menu {
-    grid-column: 3 / 4;
+    grid-area: header__menu;
 }
 
 .menu__list {
@@ -45,10 +49,6 @@ html, body {
     list-style-type: none;
     justify-content: space-between;
     padding-inline-start: 0px;
-}
-
-.menu__item {
-    list-style-type: none;
 }
 
 .menu__link {
@@ -61,12 +61,12 @@ html, body {
     text-decoration: none;
 }
 
-/**************************************/
+/*==MAIN================================================================*/
 .main {
     grid-area: main;
 }
 
-/**************************************/
+/*==FOOTER================================================================*/
 .footer {
     grid-area: footer;
 }
