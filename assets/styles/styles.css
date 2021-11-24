@@ -204,6 +204,9 @@ body {
 /* Всё, что касается первого блока INTRO */
 .intro {
     grid-area: intro;
+}
+
+.intro__block {
     display: flex;
     margin-left: 135px;
     margin-right: 135px;
@@ -276,10 +279,12 @@ body {
 /* Блок ABOUT */
 .about {
     grid-area: about;
+}
+
+.about__block {
+    width: 1170px;
+    margin: 135px;
     display: flex;
-    margin-left: 235px;
-    margin-right: 235px;
-    margin-top: 100px;
 }
 
 .about__image {
@@ -290,6 +295,7 @@ body {
     grid-template-areas:
         "column_first column_third"
         "column_second column_third";
+    margin-left: 100px;
 }
 
 .about__column_first {
@@ -308,7 +314,7 @@ body {
     margin-top: 30px;
 }
 
-.about__heading {
+.about__title {
     color: #9e9d9d;
     font-weight: 300;
 }
