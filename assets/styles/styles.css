@@ -207,7 +207,6 @@ body {
     display: flex;
     margin-left: 135px;
     margin-right: 135px;
-    border: 1px solid red;
     justify-content: space-between;
     font-family: 'Roboto', sans-serif;
 }
@@ -219,7 +218,6 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    border: 1px solid red;
 }
 
 .intro__button {
@@ -235,7 +233,6 @@ body {
 
 .intro__description {
     display: grid;
-    border: 1px solid red;
     grid-template-rows: 3fr 1fr 1fr;
 }
 
