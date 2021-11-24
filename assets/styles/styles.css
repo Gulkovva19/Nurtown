@@ -201,7 +201,7 @@ body {
         "contact-form";
 }
 
-/* Всё, что касается первого блока интро */
+/* Всё, что касается первого блока INTRO */
 .intro {
     grid-area: intro;
     display: flex;
@@ -225,6 +225,9 @@ body {
     width: 222px;
     background-color: white;
     border: none;
+    font-weight: 200;
+    color: #333333;
+    letter-spacing: 0.2em;
 }
 
 .intro__button__shape {
@@ -244,7 +247,7 @@ body {
 
 .intro__heading_gray {
     color: #9e9d9d;
-    font-weight: 100;
+    font-weight: 300;
 
 }
 
@@ -264,16 +267,63 @@ body {
     margin-right: 30px;
 }
 
-/* конец интро */
+/* Конец INTRO */
 
+
+/* Блок ABOUT */
 .about {
-    /*тут тоже все можно поменять*/
     grid-area: about;
-    display: grid;
-    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
-    grid-template-areas:
-        ". . . .";
+    display: flex;
+    margin-left: 235px;
+    margin-right: 235px;
+    margin-top: 100px;
 }
+
+.about__image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    grid-template-areas:
+        "column_first column_third"
+        "column_second column_third";
+}
+
+.about__column_first {
+    grid-area: column_first;
+    width: 270px;
+}
+
+.about__column_second {
+    grid-area: column_second;
+    width: 270px;
+}
+
+.about__column_third {
+    grid-area: column_third;
+    width: 270px;
+    margin-top: 30px;
+}
+
+.about__heading {
+    color: #9e9d9d;
+    font-weight: 300;
+}
+
+.about__text {
+    width: 400px;
+    height: 200px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.about__description {
+    width: 400px;
+    margin-left: 30px;
+}
+
+/* Конец ABOUT */
 
 .focus {
     grid-area: focus;
