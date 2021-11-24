@@ -220,7 +220,7 @@ body {
     justify-content: flex-start;
 }
 
-.intro__button {
+.button {
     height: 71px;
     width: 222px;
     background-color: white;
@@ -230,7 +230,7 @@ body {
     letter-spacing: 0.2em;
 }
 
-.intro__button__shape {
+.button__shape {
     padding-left: 8px;
 }
 
@@ -239,13 +239,13 @@ body {
     grid-template-rows: 3fr 1fr 1fr;
 }
 
-.intro__heading {
+.intro__title {
     align-self: end;
     padding-left: 15px;
     font-size: 54pt;
 }
 
-.intro__heading_gray {
+.intro__title_gray {
     color: #9e9d9d;
     font-weight: 300;
 
@@ -258,11 +258,14 @@ body {
 
 .intro__numbers {
     align-self: start;
+}
+
+.numbers {
     display: flex;
     color: #E0E0E0;
 }
 
-.intro__numbers__line {
+.numbers__line {
     margin-left: 30px;
     margin-right: 30px;
 }
