@@ -337,13 +337,41 @@ body {
 
 /* Конец ABOUT */
 
+/* Блок FOCUS*/
+
 .focus {
     grid-area: focus;
     display: grid;
-    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
+    grid-template-columns: 1fr minmax(auto, 140px) minmax(auto, 360px) minmax(auto, 170px) minmax(auto, 140px) minmax(auto, 360px) 1fr;
     grid-template-areas:
-        ". . . .";
+        "focus_subtitle focus_subtitle focus_subtitle focus_subtitle focus_subtitle"
+        "focus__number_1 focus_text_1 . focus__number_2 focus_text_2";
 }
+
+.focus_subtitle {
+    grid-area: focus_subtitle;
+}
+
+.focus__number_1 {
+    grid-area: focus__number_1;
+}
+
+.focus__number_2 {
+    grid-area: focus__number_2;
+}
+
+.focus_text_1 {
+    grid-area: focus_text_1;
+}
+
+.focus_text_2 {
+    grid-area: focus_text_2;
+}
+
+.text {
+}
+
+/* Конец FOCUS*/
 
 .projects {
     grid-area: projects;
