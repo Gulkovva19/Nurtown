@@ -457,6 +457,31 @@ body {
         ". . . .";
 }
 
+.contact-input {
+    background-color: #F3F3F3;
+    border: none;
+    color: #8D8D8D;
+    font-size: 14px;
+    font-weight: 400;
+    width: 391px;
+    height: 45px;
+    padding-left: 21px;
+}
+
+.contact-input_big {
+    background-color: #F3F3F3;
+    border: none;
+    color: #8D8D8D;
+    font-size: 14px;
+    font-weight: 400;
+    width: 391px;
+    height: 147px;
+    padding-left: 21px;
+    padding-top: 14px;
+    resize: none
+}
+
+
 /*==СЕКЦИЯ MAIN - ОСТАЛЬНЫЕ СТРАНИЦЫ ================================================================*/
 .maintest {
     /*чтобы заработало надо 1- здесь изменить имя класса .mainpage на другое, соответствующее названию вашей страницы
