@@ -395,6 +395,7 @@ body {
     font-weight: 300;
     color: #BDBDBD;
 }
+
 /* Конец FOCUS*/
 
 /* Блок PROJECTS*/
@@ -413,24 +414,24 @@ body {
 .projects_subtitle {
     grid-area: projects_subtitle;
 }
-.subtitle {
-}
-.projects_presentation {
-}
-.project_one {
-}
-.project_two {
-}
-.project_three {
-}
-.project_four {
-}
-.project_five {
-}
-.projects__button {
-}
-.button {
-}
+
+.subtitle {}
+
+.projects_presentation {}
+
+.project_one {}
+
+.project_two {}
+
+.project_three {}
+
+.project_four {}
+
+.project_five {}
+
+.projects__button {}
+
+.button {}
 
 /* Конец PROJECTS*/
 
@@ -460,7 +461,9 @@ body {
     grid-area: testtext;
 }
 
-/*==FOOTER================================================================*/
+/* блок FOOTER*/
+
+
 .footer {
     justify-self: center;
     width: 1440px;
@@ -471,9 +474,9 @@ body {
     padding-bottom: 130px;
     grid-area: footer;
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1.4fr 1.4fr;
+    grid-template-columns: 1fr minmax(auto, 350px) minmax(auto, 240px) minmax(auto, 400px) minmax(auto, 450px) 1fr;
     grid-template-areas:
-        "logo information contacts social";
+        ". logo information contacts social .";
 }
 
 .footer__logo {
@@ -545,6 +548,39 @@ body {
     margin-right: 45px;
     margin-top: 25px;
 }
+
+
+@media screen and (max-width: 1023px) {
+
+    .footer {
+        max-width: 1023px;
+        display: grid;
+        grid-template-columns: minmax(auto, 510px) minmax(auto, 513px);
+        grid-template-areas:
+            "contacts social";
+    }
+
+    .footer__contacts {
+        justify-self: center;
+    }
+
+    .footer__social {
+        justify-self: center;
+    }
+
+    .footer__logo {
+        display: none;
+    }
+
+    .footer__information {
+        display: none;
+    }
+}
+
+
+/* конец FOOTER */
+
+
 
 /* ==GALLERY===============================================================*/
 .gallery__wrapper {
