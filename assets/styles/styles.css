@@ -415,14 +415,9 @@ body {
 /* Блок PROJECTS*/
 .projects {
     grid-area: projects;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
-    grid-template-areas:
-        ". projects_subtitle projects_subtitle projects_subtitle projects_subtitle ."
-        ". project_one project_one project_two project_two ."
-        ". project_three project-four project-four project-five ."
-        ". . . . .";
-    gap: 30px
 }
 
 .projects_subtitle {
@@ -431,19 +426,29 @@ body {
 
 .subtitle {}
 
-.projects_presentation {}
+.project_one {
+    grid-area: project_one;
+}
 
-.project_one {}
+.project_two {
+    grid-area: project_two;
+}
 
-.project_two {}
+.project_three {
+    grid-area: project_three;
+}
 
-.project_three {}
+.project_four {
+    grid-area: project_four;
+}
 
-.project_four {}
+.project_five {
+    grid-area: project_five;
+}
 
-.project_five {}
-
-.projects__button {}
+.projects__button {
+    grid-area: projects__button;
+}
 
 .button {}
 
