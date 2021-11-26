@@ -236,9 +236,23 @@ body {
     line-height: 12px;
 }
 
+.button_black {
+    height: 71px;
+    width: 222px;
+    background-color: #333333;
+    border: none;
+    font-weight: 200;
+    color: #fffdfd;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 12px;
+}
+
 .button__shape {
     padding-left: 15px;
 }
+
 
 .intro__description {
     display: grid;
