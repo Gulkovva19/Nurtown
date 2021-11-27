@@ -204,18 +204,22 @@ body {
 /* Всё, что касается первого блока INTRO */
 .intro {
     grid-area: intro;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
+    grid-template-areas:
+        ". intro__block .";
 }
 
 .intro__block {
+    grid-area: intro__block;
     display: flex;
-    margin-left: 135px;
-    margin-right: 135px;
+    width:100%;
     justify-content: space-between;
     font-family: 'Roboto', sans-serif;
 }
 
 .intro__image {
-    background-image: url(/first_project/assets/images/main_page/main_image.png);
+    background-image: url(/assets/images/main_page/main_image.png);
     height: 829px;
     width: 770px;
     display: flex;
@@ -301,11 +305,15 @@ color: #fffdfd;
 /* Блок ABOUT */
 .about {
     grid-area: about;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
+    grid-template-areas:
+        ". about__block .";
 }
 
 .about__block {
-    width: 1170px;
-    margin: 135px;
+    width: 100%;
+    grid-area: about__block;
     display: flex;
 }
 
@@ -548,6 +556,17 @@ color: #fffdfd;
     height: auto;
     object-fit: cover;
 }
+
+.contact-form__privacy {
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 17px;
+letter-spacing: 0.03em;
+text-align: left;
+color: #333333;
+}
+
 /* Конец CONTACT-FORM*/
 
 /*==СЕКЦИЯ MAIN - ОСТАЛЬНЫЕ СТРАНИЦЫ ================================================================*/
