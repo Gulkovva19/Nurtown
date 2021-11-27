@@ -487,6 +487,7 @@ color: #fffdfd;
 
 .projects_button {
     grid-area: projects_button;
+    margin-top: 30px;
 }
 
 /* Конец PROJECTS*/
