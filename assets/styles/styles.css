@@ -237,16 +237,21 @@ body {
 }
 
 .button_black {
-    height: 71px;
-    width: 222px;
     background-color: #333333;
     border: none;
+    font-size: 12px;
     font-weight: 200;
     color: #fffdfd;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    font-size: 12px;
-    line-height: 12px;
+    line-height: 85%;
+    padding: 30px 47px;
+    justify-self: right;
+}
+
+.button_black a {
+text-decoration: none;
+color: #fffdfd;
 }
 
 .button__shape {
