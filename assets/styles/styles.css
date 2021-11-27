@@ -472,37 +472,39 @@ color: #fffdfd;
     grid-area: projects_button;
 }
 
-.subtitle {}
-
-
-.project_one {
-}
-
-.project_two {
-}
-
-.project_three {
-}
-
-.project_four {
-}
-
-.project_five {
-}
-
-.projects__button {
-}
-
-.button {}
-
 /* Конец PROJECTS*/
 
+/* Блок CONTACT-FORM*/
 .contact-form {
     grid-area: contact-form;
     display: grid;
-    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
+    grid-template-columns: 1fr minmax(auto, 390px) minmax(auto, 30px) minmax(auto, 750px) 1fr;
     grid-template-areas:
-        ". . . .";
+        ". contact-form__subtitle contact-form__subtitle contact-form__subtitle ."
+        ". contact-form__inputs . contact-form__image ."
+        ". contact-form__privacy . . ."
+        ". contact-form__button . . .";
+}
+
+.contact-form__subtitle {
+    grid-area: contact-form__subtitle;
+}
+
+.contact-form__inputs {
+    grid-area: contact-form__inputs;
+}
+
+.contact-form__image {
+    grid-area: contact-form__image;
+}
+
+.contact-form__privacy {
+    grid-area: contact-form__privacy;
+}
+
+.contact-form__button {
+    grid-area: contact-form__button;
+    justify-self: start;
 }
 
 .contact-input {
@@ -511,9 +513,13 @@ color: #fffdfd;
     color: #8D8D8D;
     font-size: 14px;
     font-weight: 400;
-    width: 391px;
-    height: 45px;
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 15px;
     padding-left: 21px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .contact-input_big {
@@ -522,13 +528,27 @@ color: #fffdfd;
     color: #8D8D8D;
     font-size: 14px;
     font-weight: 400;
-    width: 391px;
-    height: 147px;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 21px;
-    padding-top: 14px;
-    resize: none
+    resize: none;
+    box-sizing: border-box;
 }
 
+.contact-form__image {
+    position: relative;
+}
+
+.contact-form__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/* Конец CONTACT-FORM*/
 
 /*==СЕКЦИЯ MAIN - ОСТАЛЬНЫЕ СТРАНИЦЫ ================================================================*/
 .maintest {
