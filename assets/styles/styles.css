@@ -510,8 +510,7 @@ body {
 
 .footer {
     justify-self: center;
-    width: 1440px;
-    height: 417;
+    width: 100%;
     color: white;
     background-color: #2C2C2C;
     padding-top: 58px;
