@@ -20,22 +20,34 @@ body {
         "footer";
 }
 
+._ibg {
+    position: relative;
+}
+
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
 /*==HEADER================================================================*/
 .header {
     grid-area: header;
     align-items: center;
     display: grid;
     grid-template-columns: 1fr minmax(auto, 400px) minmax(auto, 720px) minmax(auto, 50px) 1fr;
-    /*чтобы меньше адаптировать: первая и последняя колонки,
-    они же "уши" - по 1fr - будут сокращаться при сжатии страницы; всем колонкам, которые между ними надо задать мин-макс
-    (первое значение -авто, сумма вторых значение =1170px = ширина основного контента)*/
     grid-template-areas:
         ". header__logo header__menu header__burger .";
     position: fixed;
     overflow: hidden;
+    width: 100%;
+    min-height: 105px;
     top: 0;
     left: 0;
-    width: 100%;
+    z-index: 50;
 }
 
 .header::before {
@@ -56,6 +68,12 @@ body {
     z-index: 3;
 }
 
+.header__logo img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
 .header__menu {
     grid-area: header__menu;
     overflow: auto;
@@ -68,7 +86,7 @@ body {
     justify-content: space-between;
     padding-inline-start: 0px;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .header__link {
@@ -84,34 +102,33 @@ body {
 
 .header__link:hover {
     text-decoration: underline overline;
-
 }
 
 .header__burger {
     grid-area: header__burger;
 }
 
-@media (max-width:1023px) {
-    /*body.lock{
+@media (max-width:1023px){
+    body.lock {
         overflow: hidden;
-    }*/
+    }
+
+    .header {
+    min-height: 65px;
+    width: 100%;
+    }
+
+    .header.active {
+        position: fixed;
+    }
 
     .header__burger {
+        display: block;
         position: relative;
         width: 30px;
         height: 20px;
         margin-top: 0px;
         z-index: 3;
-    }
-
-    .header__burger span {
-        position: absolute;
-        background-color: #333333;
-        width: 100%;
-        height: 2px;
-        left: 0;
-        top: 9px;
-        transition: all 0.3s ease 0s;
     }
 
     .header__burger::before,
@@ -133,20 +150,31 @@ body {
         bottom: 0;
     }
 
-    /*
     .header__burger.active::before {
-        transform:rotate(45deg);
+        transform: rotate(45deg);
         top: 9px;
+        background-color:#000000;
     }
 
     .header__burger.active::after {
-        transform:rotate(-45deg);
+        transform: rotate(-45deg);
         bottom: 9px;
+        background-color:#000000;
+    }
+
+    .header__burger span {
+        position: absolute;
+        background-color: #333333;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 9px;
+        transition: all 0.3s ease 0s;
     }
 
     .header__burger.active span {
         transform: scale(0);
-    }*/
+    }
 
     .header__menu {
         position: fixed;
@@ -154,17 +182,19 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rosybrown;
-        padding: 30px 10px 20px 10px;
+        background-color: #Ffffff;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align:center;
         transition: all 0.3s ease 0s;
+        overflow: auto;
     }
 
     .header__menu.active {
         top: 0;
-    }
-
-    .header {
-        height: 50px;
     }
 
     .header__logo {
@@ -174,14 +204,19 @@ body {
     .header__list {
         display: block;
         text-align: center;
+        padding-top: 108px;
     }
 
     .header__list li {
-        padding-top: 50px;
+        margin: 0px 0px 60px 0px;
     }
 
     .header__link {
+        color:#000000;
         font-size: 18px;
+        font-weight: 500;
+        line-height: 140%;
+        text-align: center;
     }
 
 }
