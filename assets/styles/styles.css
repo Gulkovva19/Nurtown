@@ -415,39 +415,77 @@ body {
 /* Блок PROJECTS*/
 .projects {
     grid-area: projects;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
+    grid-template-areas:
+        ". projects_subtitle ."
+        ". projects_presentation ."
+        ". projects_button .";
 }
 
 .projects_subtitle {
     grid-area: projects_subtitle;
 }
 
+.projects_presentation {
+    grid-area: projects_presentation;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.projects__item {
+    position:relative;
+    padding: 0px 0px 85% 0px;
+}
+
+.projects__item_big {
+    grid-column: span 2;
+}
+
+.projects__item_small {
+    grid-column: span 0.95;
+}
+.projects__item_middleplus {
+    grid-column: span 1.65;
+}
+.projects__item_middle {
+    grid-column: span 1.4;
+    margin-left: -37%;
+}
+
+.projects__item img {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.projects_button {
+    grid-area: projects_button;
+}
+
 .subtitle {}
 
+
 .project_one {
-    grid-area: project_one;
 }
 
 .project_two {
-    grid-area: project_two;
 }
 
 .project_three {
-    grid-area: project_three;
 }
 
 .project_four {
-    grid-area: project_four;
 }
 
 .project_five {
-    grid-area: project_five;
 }
 
 .projects__button {
-    grid-area: projects__button;
 }
 
 .button {}
@@ -596,7 +634,7 @@ body {
 @media screen and (max-width: 1023px) {
 
     .footer {
-        max-width: 1023px;
+        width: 100%;
         display: grid;
         grid-template-columns: minmax(auto, 510px) minmax(auto, 513px);
         grid-template-areas:
