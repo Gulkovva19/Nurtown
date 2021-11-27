@@ -208,6 +208,7 @@ body {
     grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
     grid-template-areas:
         ". intro__block .";
+    margin-bottom: 150px;
 }
 
 .intro__block {
@@ -228,17 +229,22 @@ body {
 }
 
 .button {
-    height: 71px;
-    width: 222px;
     background-color: white;
     border: none;
+    font-size: 12px;
     font-weight: 200;
     color: #333333;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    font-size: 12px;
-    line-height: 12px;
+    line-height: 85%;
+    padding: 30px 47px;
+    justify-self: right;
 }
+
+.button a {
+    text-decoration: none;
+    color: #333333;
+    }
 
 .button_black {
     background-color: #333333;
@@ -309,6 +315,7 @@ color: #fffdfd;
     grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
     grid-template-areas:
         ". about__block .";
+        margin-bottom: 120px;
 }
 
 .about__block {
@@ -372,6 +379,7 @@ color: #fffdfd;
     grid-template-areas:
         ". focus_subtitle focus_subtitle focus_subtitle focus_subtitle focus_subtitle ."
         ". focus__number_1 focus_text_1 . focus__number_2 focus_text_2 .";
+    margin-bottom: 120px;
 }
 
 .focus_subtitle {
@@ -434,6 +442,7 @@ color: #fffdfd;
         ". projects_subtitle ."
         ". projects_presentation ."
         ". projects_button .";
+    margin-bottom: 120px;
 }
 
 .projects_subtitle {
@@ -472,7 +481,7 @@ color: #fffdfd;
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -486,12 +495,13 @@ color: #fffdfd;
 .contact-form {
     grid-area: contact-form;
     display: grid;
-    grid-template-columns: 1fr minmax(auto, 390px) minmax(auto, 30px) minmax(auto, 750px) 1fr;
+    grid-template-columns: 1fr minmax(auto, 391px) minmax(auto, 30px) minmax(auto, 749px) 1fr;
     grid-template-areas:
         ". contact-form__subtitle contact-form__subtitle contact-form__subtitle ."
         ". contact-form__inputs . contact-form__image ."
-        ". contact-form__privacy . . ."
-        ". contact-form__button . . .";
+        ". contact-form__privacy contact-form__privacy contact-form__privacy ."
+        ". contact-form__button contact-form__button contact-form__button .";
+    margin-bottom: 120px;
 }
 
 .contact-form__subtitle {
@@ -523,7 +533,7 @@ color: #fffdfd;
     font-weight: 400;
     width: 100%;
     padding-top: 16px;
-    padding-bottom: 15px;
+    padding-bottom: 16px;
     padding-left: 21px;
     padding-right: 0px;
     margin-bottom: 10px;
@@ -537,25 +547,20 @@ color: #fffdfd;
     font-size: 14px;
     font-weight: 400;
     width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     padding-left: 21px;
     resize: none;
     box-sizing: border-box;
 }
 
 .contact-form__image {
-    position: relative;
+    background-image: url('/assets/images/contact-form/contact-form.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.contact-form__image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
+
 
 .contact-form__privacy {
 font-size: 12px;
@@ -565,6 +570,8 @@ line-height: 17px;
 letter-spacing: 0.03em;
 text-align: left;
 color: #333333;
+margin-top: 21px;
+margin-bottom: 21px;
 }
 
 /* Конец CONTACT-FORM*/
