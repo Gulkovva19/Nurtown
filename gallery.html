@@ -5,17 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gallery</title>
     <link rel="stylesheet" href="/assets/styles/normalize.css" type="text/css">
     <link rel="stylesheet" href="/assets/styles/styles.css" type="text/css">
+    <link rel="shortcut icon" href="assets/images/favicon.png">
 
 </head>
 
 <body>
     <div class="wrapper">
-        <header class="header">Header is here</header>
-        <main class="main">
-            <div class="main__wrapper">
+        <header class="header">
+            <a href class="header__logo">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="assets/images/logo.svg">
+                    <source media="(max-width: 767px)" srcset="assets/images/logo-noletters.svg">
+                    <img src="assets/images/logo.svg" alt="company logo" style="width:auto;">
+                </picture>
+            </a>
+            <nav class="header__menu menu">
+                <ul class="header__list">
+                    <li>
+                        <a href="" class="header__link">Main</a>
+                    </li>
+                    <li>
+                        <a href="" class="header__link">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="" class="header__link">Projects</a>
+                    </li>
+                    <li>
+                        <a href="" class="header__link">Certifications</a>
+                    </li>
+                    <li>
+                        <a href="" class="header__link">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__burger">
+                <span></span>
+            </div>
+        </header>
+
+        <main class="main-gallery">
+            <div class="gallery__wrapper">
                 <div class="gallery__title">
                     <div class="gallery__title_gray">Photo</div>
                     <div class="gallery__title_black">Gallery</div>
@@ -57,7 +89,7 @@
                     <div class="numbers">
                         <p class="number_active">01</p>
                         <img class="numbers__line" src="./assets/images/main_page/slide_line.svg" alt="slide_line">
-                        <p>05</p>
+                        <p class="numbers">05</p>
                     </div>
                     <div class="arrow">
                         <img class="arrow arrow_left" src="./assets/images/main_page/strelochka1.svg" alt="strelochka">
@@ -66,7 +98,65 @@
                 </div>
             </div>
         </main>
-        <footer class="footer">Footer is here</footer>
+        <footer class="footer">
+            <div class="footer__logo">
+                <img class="footer__image" src="./assets/images/white-logo.svg" alt="logo">
+            </div>
+            <div class="footer__information">Information
+                <nav class="footer__menu">
+                    <ul class="footer__column">
+                        <li>
+                            <a href="" class="footer__link">Main</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__link">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__link">Projects</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__link">Certifications</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__link">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__contacts">Contacts
+                <div class="footer__communications">
+                    <div class="footer__items">
+                        <img class="footer__contacts-icon" src="./assets/images/main_page/contacts01.svg"
+                            alt="contacts01">
+                        <p>100000, Республика Казахстан, <br />
+                            г. Караганда, ул. Телевизионная 10</p>
+                    </div>
+                    <div class="footer__items">
+                        <img class="footer__contacts-icon" src="./assets/images/main_page/contacts02.svg"
+                            alt="contacts02">
+                        <p>+7 (701) 77 76 811</p>
+                    </div>
+                    <div class="footer__items">
+                        <img class="footer__contacts-icon" src="./assets/images/main_page/contacts03.svg"
+                            alt="contacts03">
+                        <p>Galym.sultanov@mail.ru</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__social">Social networks
+                <div class="footer__networks">
+                    <a href=#><img class="footer__networks-icon" src="./assets/images/main_page/facebook.svg"
+                            alt="facebook"></a>
+                    <a href=#><img class="footer__networks-icon" src="./assets/images/main_page/twitter.svg"
+                            alt="twitter"></a>
+                    <a href=#><img class="footer__networks-icon" src="./assets/images/main_page/linkedin.svg"
+                            alt="linkedin"></a>
+                    <a href=#><img class="footer__networks-icon" src="./assets/images/main_page/pinterest.svg"
+                            alt="pinterest"></a>
+                </div>
+            </div>
+        </footer>
+
     </div>
 </body>
 
