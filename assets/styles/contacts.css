@@ -1,0 +1,70 @@
+.main {
+    width: 80%;
+    background: #FFFFFF;
+    /*также подумать - цвет оставляет этот только main или body тоже*/
+    margin: auto;
+    padding-bottom: 120px;
+}
+
+.main .contact-wrraper {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main .contact-wrraper .contacts {
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main .contact-wrraper .map {
+    width: 655px;
+    background-size: cover;
+
+}
+
+.main h1 {
+    margin: 63px 0 0 0;
+    height: 128px;
+    width: 338px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 64px;
+    line-height: 64px;
+}
+
+.main p {
+    margin: 0;
+    width: 280px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+}
+
+.main a {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 18.75px;
+    font-weight: 300;
+    color: #333333;
+    text-decoration: none;
+}
+
+.main button {
+    height: 71px;
+    width: 222px;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+    background: #333333;
+    border: 0 none;
+}
