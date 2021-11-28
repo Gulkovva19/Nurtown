@@ -350,7 +350,7 @@ body {
     grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
     grid-template-areas:
         ". about__block .";
-    margin-bottom: 120px;
+    margin-bottom: 60px;
 }
 
 .about__block {
@@ -411,7 +411,7 @@ body {
     grid-area: focus;
     display: grid;
     margin-bottom: 120px;
-    grid-template-columns: 1fr minmax(auto, 140px) minmax(auto, 320px) minmax(auto, 170px) minmax(auto, 140px) minmax(auto, 400px) 1fr;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 140px) minmax(auto, 320px) minmax(auto, 170px) minmax(auto, 140px) minmax(auto, 400px) minmax(1rem, 1fr);
     grid-template-areas:
         ". focus_subtitle focus_subtitle focus_subtitle focus_subtitle focus_subtitle ."
         ". focus__number_1 focus_text_1 . focus__number_2 focus_text_2 .";
@@ -506,7 +506,7 @@ body {
 .projects {
     grid-area: projects;
     display: grid;
-    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1170px) minmax(1rem, 1fr);
     grid-template-areas:
         ". projects_subtitle ."
         ". projects_presentation ."
@@ -567,7 +567,7 @@ body {
 .contact-form {
     grid-area: contact-form;
     display: grid;
-    grid-template-columns: 1fr minmax(auto, 391px) minmax(auto, 30px) minmax(auto, 749px) 1fr;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 391px) minmax(auto, 30px) minmax(auto, 749px) minmax(1rem, 1fr);
     grid-template-areas:
         ". contact-form__subtitle contact-form__subtitle contact-form__subtitle ."
         ". contact-form__inputs . contact-form__image ."
