@@ -839,3 +839,30 @@ body {
 }
 
 /* == Конец Gallery=================================================== */
+
+/* == Начало Certifications page====================================== */
+
+.certifications__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 64px;
+    color: #333333;
+}
+
+.certifications__title_gray {
+    font-weight: 300;
+    color: #BDBDBD;
+}
+
+.certifications__slide {
+    display: flex;
+
+}
+
+
+/* == Конец Certifications page======================================= */
