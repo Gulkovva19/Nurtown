@@ -158,21 +158,32 @@
 
             <div class="contact-form">
                 <h2 class="contact-form__subtitle subtitle">Contact us</h2>
-                <div class="contact-form__inputs">
-                    <input class="contact-input" type="text" placeholder="Name">
-                    <input class="contact-input" type="text" placeholder="Phone number">
-                    <input class="contact-input" type="text" placeholder="E-mail">
-                    <input class="contact-input" type="text" placeholder="Service">
-                    <textarea class="contact-input_big" name="comment" id="" cols="30" rows="9" placeholder="Message"></textarea>
-                </div>
-                <div class="contact-form__image">
-                </div>
-                <form class="contact-form__privacy">
-                    <input type="checkbox" name="privacy" value="checked"> You agree to the privacy policy
+                <form class="contact-form__inputs" action="#" method="get">
+                    <div>
+                        <input class="contact-input" type="text" name="username" value="" placeholder="Name" tabindex="1">
+                    </div>
+                    <div>
+                        <input class="contact-input" type="tel" name="userphone" value="" placeholder="Phone number" tabindex="2">
+                    </div>
+                    <div>
+                        <input class="contact-input" type="text" name="usermail" value="" placeholder="E-mail" tabindex="3">
+                    </div>
+                    <div>
+                        <input class="contact-input" type="text" name="servicetype" value="" placeholder="Service" tabindex="4">
+                    </div>
+                    <div>
+                        <textarea class="contact-input_big" name="comment" id="" cols="30" rows="9" placeholder="Message" tabindex="5"></textarea>
+                    </div>
+                    <div class="contact-form__privacy">
+                        <p><input type="checkbox" name="privacy" value="OK" tabindex="6" required/> You agree to the privacy policy</p>
+                    </div>
+                    <button class="contact-form__button" type="submit" tabindex="7">
+                        Send E-mail<img class="button__shape" src="./assets/images/main_page/ico_shape_white.svg" alt="arrow-icon">
+                    </button>
                 </form>
-                <button class="contact-form__button button_black">
-                    Send E-mail<img class="button__shape" src="./assets/images/main_page/ico_shape_white.svg" alt="arrow-icon">
-                </button>
+                <div class="contact-form__image">
+                    <img src="/assets/images/contact-form/contact-form.png" alt="">
+                </div>
             </div>
 
         </main>
