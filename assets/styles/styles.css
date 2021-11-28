@@ -255,7 +255,7 @@ body {
 }
 
 .intro__image {
-    background-image: url(/assets/images/main_page/main_image.png);
+    background-image: url('/assets/images/main_page/main_image.png');
     height: 829px;
     width: 770px;
     display: flex;
