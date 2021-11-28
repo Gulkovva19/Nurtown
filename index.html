@@ -17,9 +17,9 @@
         <header class="header">
             <a href class="header__logo">
                 <picture>
-                    <source media="(min-width: 768px)" srcset="assets/images/logo.png">
-                    <source media="(max-width: 767px)" srcset="assets/images/logo-noletters.png">
-                    <img src="assets/images/logo.png" alt="company logo" style="width:auto;">
+                    <source media="(min-width: 768px)" srcset="assets/images/logo.svg">
+                    <source media="(max-width: 767px)" srcset="assets/images/logo-noletters.svg">
+                    <img src="assets/images/logo.svg" alt="company logo" style="width:auto;">
                 </picture>
             </a>
             <nav class="header__menu menu">
@@ -66,9 +66,11 @@
                         </div>
                     </div>
                     <div class="intro__image">
-                        <button class="intro__button button">glance
-                            <img class="button__shape" src="./assets/images/main_page/ico_shape.svg" alt="ico">
-                        </button>
+                        <div class="intro__button button">
+                            <a href="">
+                                View project<img class="button__shape" src="./assets/images/main_page/ico_shape.svg" alt="ico">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,11 +78,11 @@
             <div class="about">
                 <div class="about__block">
                     <div class="about__image">
-                        <img div class="about__column_first" src="./assets/images/main_page/about_image1.svg"
+                        <img div class="about__column_first" src="./assets/images/main_page/about_image01.png"
                             alt="about_image1">
-                        <img div class="about__column_second" src="./assets/images/main_page/about_image2.svg"
+                        <img div class="about__column_second" src="./assets/images/main_page/about_image02.png"
                             alt="about_image2">
-                        <img div class="about__column_third" src="./assets/images/main_page/about_image3.svg"
+                        <img div class="about__column_third" src="./assets/images/main_page/about_image03.png"
                             alt="about_image3">
                     </div>
                     <div class="about__description">
@@ -99,25 +101,156 @@
                             but also the leap into <br /> electronic typesetting, remaining essentially <br />
                             unchanged.
                         </p>
-                        <button class="about__button button">read
-                            <img class="button__shape" src="./assets/images/main_page/ico_shape.svg" alt="ico">
-                        </button>
+                        <div class="about__button button">
+                            <a href="">
+                                Read More<img class="button__shape" src="./assets/images/main_page/ico_shape.svg" alt="icon">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="focus"></div>
+            <div class="focus">
+                <h2 class="focus_subtitle subtitle">Our Mission</h2>
+                <div class="focus__number_1 number">
+                    1
+                </div>
+                <div class="focus_text_1 text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, lectus et facilisis
+                        placerat.
+                </div>
+                <div class="focus__number_2 number">
+                    2
+                </div>
+                <div class="focus_text_2 text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, lectus et facilisis
+                        placerat, magna mauris porttitor tortor, a auctor est felis ut nisl.
+                </div>
+            </div>
 
-            <div class="projects"></div>
+            <div class="projects">
+                <h2 class="projects_subtitle subtitle">Our Projects</h2>
+                <div class="projects_presentation">
+                    <div class="projects__item_big">
+                        <img class="project_img" src="assets/images/projects/project-1.png" alt="">
+                    </div>
+                    <div class="projects__item_big">
+                        <img class="project_img" src="assets/images/projects/project-2.png" alt="">
+                    </div>
+                    <div class="projects__item_small">
+                        <img class="project_img" src="assets/images/projects/project-3.png" alt="">
+                    </div>
+                    <div class="projects__item_middleplus">
+                        <img class="project_img" src="assets/images/projects/project-4.png" alt="">
+                    </div>
+                    <div class="projects__item_null">
+                    </div>
+                    <div class="projects__item_middle">
+                        <img class="project_img" src="assets/images/projects/project-5.png" alt="">
+                    </div>
+                </div>
+                <div class="projects_button button_black">
+                    <a href="">
+                        All projects<img class="button__shape" src="./assets/images/main_page/ico_shape_white.svg" alt="arrow-icon">
+                    </a>
+                </div>
+            </div>
 
-            <div class="contact-form"></div>
+            <div class="contact-form">
+                <h2 class="contact-form__subtitle subtitle">Contact us</h2>
+                <form class="contact-form__inputs" action="#" method="get">
+                    <div>
+                        <input class="contact-input" type="text" name="username" value="" placeholder="Name" tabindex="1">
+                    </div>
+                    <div>
+                        <input class="contact-input" type="tel" name="userphone" value="" placeholder="Phone number" tabindex="2">
+                    </div>
+                    <div>
+                        <input class="contact-input" type="text" name="usermail" value="" placeholder="E-mail" tabindex="3">
+                    </div>
+                    <div>
+                        <input class="contact-input" type="text" name="servicetype" value="" placeholder="Service" tabindex="4">
+                    </div>
+                    <div>
+                        <textarea class="contact-input_big" name="comment" id="" cols="30" rows="8" placeholder="Message" tabindex="5"></textarea>
+                    </div>
+                    <div class="contact-form__privacy">
+                        <p><input type="checkbox" name="privacy" value="OK" tabindex="6" required/> You agree to the privacy policy</p>
+                    </div>
+                    <button class="contact-form__button" type="submit" tabindex="7">
+                        Send E-mail<img class="button__shape" src="./assets/images/main_page/ico_shape_white.svg" alt="arrow-icon">
+                    </button>
+                </form>
+                <div class="contact-form__image">
+                    <img src="assets/images/contact-form/contact-form.png" alt="">
+                </div>
+            </div>
 
         </main>
 
 
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <div class="footer__logo">
+                <img class="footer__image" src="./assets/images/white-logo.svg" alt="logo">
+            </div>
+            <div class="footer__information">Information
+                <nav class="footer__menu">
+                    <ul class="footer__column">
+                        <li>
+                            <a href="" class="footer__link">Main</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__link">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__link">Projects</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__link">Certifications</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__link">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__contacts">Contacts
+                <div class="footer__communications">
+                    <div class="footer__items">
+                        <img class="footer__contacts-icon" src="./assets/images/main_page/contacts01.svg"
+                            alt="contacts01">
+                        <p>100000, Республика Казахстан, <br />
+                            г. Караганда, ул. Телевизионная 10</p>
+                    </div>
+                    <div class="footer__items">
+                        <img class="footer__contacts-icon" src="./assets/images/main_page/contacts02.svg"
+                            alt="contacts02">
+                        <p>+7 (701) 77 76 811</p>
+                    </div>
+                    <div class="footer__items">
+                        <img class="footer__contacts-icon" src="./assets/images/main_page/contacts03.svg"
+                            alt="contacts03">
+                        <p>Galym.sultanov@mail.ru</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__social">Social networks
+                <div class="footer__networks">
+                    <a href=#><img class="footer__networks-icon" src="./assets/images/main_page/facebook.svg"
+                            alt="facebook"></a>
+                    <a href=#><img class="footer__networks-icon" src="./assets/images/main_page/twitter.svg"
+                            alt="twitter"></a>
+                    <a href=#><img class="footer__networks-icon" src="./assets/images/main_page/linkedin.svg"
+                            alt="linkedin"></a>
+                    <a href=#><img class="footer__networks-icon" src="./assets/images/main_page/pinterest.svg"
+                            alt="pinterest"></a>
+                </div>
+            </div>
+        </footer>
 
     </div>
+    <script src="http://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

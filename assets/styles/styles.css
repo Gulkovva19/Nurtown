@@ -20,22 +20,34 @@ body {
         "footer";
 }
 
+._ibg {
+    position: relative;
+}
+
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
 /*==HEADER================================================================*/
 .header {
     grid-area: header;
     align-items: center;
     display: grid;
     grid-template-columns: 1fr minmax(auto, 400px) minmax(auto, 720px) minmax(auto, 50px) 1fr;
-    /*чтобы меньше адаптировать: первая и последняя колонки,
-    они же "уши" - по 1fr - будут сокращаться при сжатии страницы; всем колонкам, которые между ними надо задать мин-макс
-    (первое значение -авто, сумма вторых значение =1170px = ширина основного контента)*/
     grid-template-areas:
         ". header__logo header__menu header__burger .";
     position: fixed;
     overflow: hidden;
+    width: 100%;
+    min-height: 105px;
     top: 0;
     left: 0;
-    width: 100%;
+    z-index: 50;
 }
 
 .header::before {
@@ -56,6 +68,12 @@ body {
     z-index: 3;
 }
 
+.header__logo img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
 .header__menu {
     grid-area: header__menu;
     overflow: auto;
@@ -68,7 +86,7 @@ body {
     justify-content: space-between;
     padding-inline-start: 0px;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .header__link {
@@ -84,34 +102,33 @@ body {
 
 .header__link:hover {
     text-decoration: underline overline;
-
 }
 
 .header__burger {
     grid-area: header__burger;
 }
 
-@media (max-width:1023px) {
-    /*body.lock{
+@media screen and (max-width:1023px){
+    body.lock {
         overflow: hidden;
-    }*/
+    }
+
+    .header {
+    min-height: 65px;
+    width: 100%;
+    }
+
+    .header.active {
+        position: fixed;
+    }
 
     .header__burger {
+        display: block;
         position: relative;
         width: 30px;
         height: 20px;
         margin-top: 0px;
         z-index: 3;
-    }
-
-    .header__burger span {
-        position: absolute;
-        background-color: #333333;
-        width: 100%;
-        height: 2px;
-        left: 0;
-        top: 9px;
-        transition: all 0.3s ease 0s;
     }
 
     .header__burger::before,
@@ -133,20 +150,31 @@ body {
         bottom: 0;
     }
 
-    /*
     .header__burger.active::before {
-        transform:rotate(45deg);
+        transform: rotate(45deg);
         top: 9px;
+        background-color:#000000;
     }
 
     .header__burger.active::after {
-        transform:rotate(-45deg);
+        transform: rotate(-45deg);
         bottom: 9px;
+        background-color:#000000;
+    }
+
+    .header__burger span {
+        position: absolute;
+        background-color: #333333;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 9px;
+        transition: all 0.3s ease 0s;
     }
 
     .header__burger.active span {
         transform: scale(0);
-    }*/
+    }
 
     .header__menu {
         position: fixed;
@@ -154,17 +182,19 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rosybrown;
-        padding: 30px 10px 20px 10px;
+        background-color: #Ffffff;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align:center;
         transition: all 0.3s ease 0s;
+        overflow: auto;
     }
 
     .header__menu.active {
         top: 0;
-    }
-
-    .header {
-        height: 50px;
     }
 
     .header__logo {
@@ -174,21 +204,26 @@ body {
     .header__list {
         display: block;
         text-align: center;
+        padding-top: 108px;
     }
 
     .header__list li {
-        padding-top: 50px;
+        margin: 0px 0px 60px 0px;
     }
 
     .header__link {
+        color:#000000;
         font-size: 18px;
+        font-weight: 500;
+        line-height: 140%;
+        text-align: center;
     }
 
 }
 
 
 /*==СЕКЦИЯ MAIN - ОСНОВНАЯ СТРАНИЦА ================================================================*/
-.mainpage {
+.main {
     grid-area: main;
     display: grid;
     min-height: 100%;
@@ -204,18 +239,23 @@ body {
 /* Всё, что касается первого блока INTRO */
 .intro {
     grid-area: intro;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
+    grid-template-areas:
+        ". intro__block .";
+    margin-bottom: 150px;
 }
 
 .intro__block {
+    grid-area: intro__block;
     display: flex;
-    margin-left: 135px;
-    margin-right: 135px;
+    width:100%;
     justify-content: space-between;
     font-family: 'Roboto', sans-serif;
 }
 
 .intro__image {
-    background-image: url(/first_project/assets/images/main_page/Rectangle\ 6.svg);
+    background-image: url('/assets/images/main_page/main_image.png');
     height: 829px;
     width: 770px;
     display: flex;
@@ -224,18 +264,45 @@ body {
 }
 
 .button {
-    height: 71px;
-    width: 222px;
     background-color: white;
     border: none;
+    font-size: 12px;
     font-weight: 200;
     color: #333333;
     letter-spacing: 0.2em;
+    text-transform: uppercase;
+    line-height: 85%;
+    padding: 30px 47px;
+    justify-self: right;
+}
+
+.button a {
+    text-decoration: none;
+    color: #333333;
+    }
+
+.button_black {
+    background-color: #333333;
+    border: none;
+    font-size: 12px;
+    font-weight: 200;
+    color: #fffdfd;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    line-height: 85%;
+    padding: 30px 47px;
+    justify-self: right;
+}
+
+.button_black a {
+text-decoration: none;
+color: #fffdfd;
 }
 
 .button__shape {
-    padding-left: 8px;
+    padding-left: 15px;
 }
+
 
 .intro__description {
     display: grid;
@@ -279,11 +346,16 @@ body {
 /* Блок ABOUT */
 .about {
     grid-area: about;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
+    grid-template-areas:
+        ". about__block .";
+        margin-bottom: 120px;
 }
 
 .about__block {
-    width: 1170px;
-    margin: 135px;
+    width: 100%;
+    grid-area: about__block;
     display: flex;
 }
 
@@ -334,52 +406,378 @@ body {
 
 /* Конец ABOUT */
 
+/* Блок FOCUS*/
 .focus {
     grid-area: focus;
     display: grid;
-    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
+    margin-bottom: 120px;
+    grid-template-columns: 1fr minmax(auto, 140px) minmax(auto, 320px) minmax(auto, 170px) minmax(auto, 140px) minmax(auto, 400px) 1fr;
     grid-template-areas:
-        ". . . .";
+        ". focus_subtitle focus_subtitle focus_subtitle focus_subtitle focus_subtitle ."
+        ". focus__number_1 focus_text_1 . focus__number_2 focus_text_2 .";
+
 }
 
+.focus_subtitle {
+    grid-area: focus_subtitle;
+}
+
+.focus__number_1 {
+    grid-area: focus__number_1;
+}
+
+.focus__number_2 {
+    grid-area: focus__number_2;
+}
+
+.focus_text_1 {
+    grid-area: focus_text_1;
+    align-items: center;
+}
+
+.focus_text_2 {
+    grid-area: focus_text_2;
+}
+
+.text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    text-align: left;
+    color: #333333;
+    margin-left: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.number {
+    font-family: 'Roboto', sans-serif;
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 70%;
+    text-align: left;
+    color: #F2F2F2;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.subtitle {
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 64px;
+    text-align: left;
+    font-weight: 300;
+    color: #BDBDBD;
+}
+
+@media screen and (max-width:1024px){
+    .about {
+        margin-bottom: 0px;
+    }
+
+    .focus {
+        margin: 0px 25px;
+    }
+
+    .subtitle {
+        font-size: 54px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .text {
+        font-size: 18px;
+        margin-left: 0px;
+    }
+
+    .number {
+        font-size: 140px;
+        margin-left: 0px;
+        text-align: left;
+    }
+    }
+
+/* Конец FOCUS*/
+
+/* Блок PROJECTS*/
 .projects {
     grid-area: projects;
     display: grid;
     grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
     grid-template-areas:
-        ". . . .";
+        ". projects_subtitle ."
+        ". projects_presentation ."
+        ". projects_button .";
+    margin-bottom: 120px;
 }
 
+.projects_subtitle {
+    grid-area: projects_subtitle;
+}
+
+.projects_presentation {
+    grid-area: projects_presentation;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.projects__item {
+    position:relative;
+    padding: 0px 0px 85% 0px;
+}
+
+.projects__item_big {
+    grid-column: span 2;
+}
+
+.projects__item_small {
+    grid-column: span 0.95;
+}
+.projects__item_middleplus {
+    grid-column: span 1.65;
+}
+.projects__item_middle {
+    grid-column: span 1.4;
+    margin-left: -37%;
+}
+
+.projects__item img {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projects_button {
+    grid-area: projects_button;
+    margin-top: 30px;
+}
+
+/* Конец PROJECTS*/
+
+/* Блок CONTACT-FORM*/
 .contact-form {
     grid-area: contact-form;
     display: grid;
-    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
+    grid-template-columns: 1fr minmax(auto, 391px) minmax(auto, 30px) minmax(auto, 749px) 1fr;
     grid-template-areas:
-        ". . . .";
+        ". contact-form__subtitle contact-form__subtitle contact-form__subtitle ."
+        ". contact-form__inputs . contact-form__image ."
+        ". contact-form__inputs . . .";
+    margin-bottom: 120px;
 }
 
-/*==СЕКЦИЯ MAIN - ОСТАЛЬНЫЕ СТРАНИЦЫ ================================================================*/
-.maintest {
-    /*чтобы заработало надо 1- здесь изменить имя класса .mainpage на другое, соответствующее названию вашей страницы
-    2- в вашем html документе задать имя класса так: main class="main ваше-имя-класса">*/
-    grid-area: main;
-    display: grid;
-    min-height: 100%;
-    /*Все, что ниже можно задать как годно и изменить количество колонок и столбцов, можно вообще удалить, если мешает*/
-    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
-    grid-template-areas:
-        ". testtext ."
-        ". testtext ."
+.contact-form__subtitle {
+    grid-area: contact-form__subtitle;
 }
 
-.testtext {
-    grid-area: testtext;
+.contact-form__inputs {
+    grid-area: contact-form__inputs;
 }
 
-/*==FOOTER================================================================*/
+.contact-form__image {
+    grid-area: contact-form__image;
+    position: relative;
+}
+
+.contact-form__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.contact-form__button {
+    grid-area: contact-form__button;
+    justify-self: start;
+}
+
+.contact-input {
+    background-color: #F3F3F3;
+    border: none;
+    color: #8D8D8D;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 21px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.contact-input_big {
+    background-color: #F3F3F3;
+    border: none;
+    color: #8D8D8D;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 21px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.contact-form__image {
+
+}
+
+.contact-form__privacy {
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 17px;
+letter-spacing: 0.03em;
+text-align: left;
+color: #333333;
+margin-top: 21px;
+margin-bottom: 21px;
+}
+
+.contact-form__button {
+    background-color: #333333;
+    border: none;
+    font-size: 12px;
+    font-weight: 200;
+    color: #fffdfd;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    line-height: 85%;
+    padding: 30px 47px;
+    justify-self: start;
+}
+
+/* Конец CONTACT-FORM*/
+
+/* блок FOOTER*/
+
+
 .footer {
+    justify-self: center;
+    width: 100%;
+    color: white;
+    background-color: #2C2C2C;
+    padding-top: 58px;
+    padding-bottom: 130px;
     grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 350px) minmax(auto, 240px) minmax(auto, 400px) minmax(auto, 450px) 1fr;
+    grid-template-areas:
+        ". logo information contacts social .";
 }
+
+.footer__logo {
+    justify-self: center;
+    grid-area: logo;
+}
+
+.footer__image {
+    width: 145px;
+    height: 94px;
+}
+
+.footer__information {
+    grid-area: information;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+.footer__column {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 190px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.footer__contacts {
+    grid-area: contacts;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.footer__communications {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 25px;
+    height: 190px;
+}
+
+.footer__items {
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer__contacts-icon {
+    margin-right: 19px;
+}
+
+.footer__social {
+    grid-area: social;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.footer__networks-icon {
+    margin-right: 45px;
+    margin-top: 25px;
+}
+
+
+@media screen and (max-width: 1023px) {
+
+    .footer {
+        width: 100%;
+        display: grid;
+        grid-template-columns: minmax(auto, 510px) minmax(auto, 513px);
+        grid-template-areas:
+            "contacts social";
+    }
+
+    .footer__contacts {
+        justify-self: center;
+    }
+
+    .footer__social {
+        justify-self: center;
+    }
+
+    .footer__logo {
+        display: none;
+    }
+
+    .footer__information {
+        display: none;
+    }
+}
+
+
+/* конец FOOTER */
+
 
 
 /* ==GALLERY===============================================================*/
