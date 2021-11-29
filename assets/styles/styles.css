@@ -356,6 +356,8 @@ body {
     width: 100%;
     grid-area: about__block;
     display: flex;
+    background-color: #FBFBFB;
+    padding-top: 30px;
 }
 
 .about__image {
@@ -367,6 +369,7 @@ body {
         "column_first column_third"
         "column_second column_third";
     margin-left: 100px;
+    height: 465px;
 }
 
 .about__column_first {
