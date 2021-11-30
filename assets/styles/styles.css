@@ -50,8 +50,8 @@ body {
 
 .header__logo {
     grid-area: header__logo;
-    width: 90px;
-    padding-left: 15px;
+    width: 100px;
+    padding-top: 12.5px;
     z-index: 3;
 }
 
@@ -93,6 +93,8 @@ body {
 
 .header__burger {
     grid-area: header__burger;
+    margin-right: 40px;
+    align-self: center;
 }
 
 @media screen and (max-width:1023px) {
@@ -230,7 +232,7 @@ body {
     grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
     grid-template-areas:
         ". intro__block .";
-    margin-bottom: 150px;
+    margin-bottom: 120px;
 }
 
 .intro__block {
@@ -336,7 +338,7 @@ body {
     display: grid;
     grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
     grid-template-areas: ". about__block .";
-    margin-bottom: 60px;
+    margin-bottom: 120px;
 }
 
 .about__block {
@@ -396,6 +398,18 @@ body {
 /* Конец ABOUT */
 
 /* Блок FOCUS*/
+.subtitle {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 85%;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #BDBDBD;
+    margin-top: 0px;
+    margin-bottom: 60px;
+}
+
 .focus {
     grid-area: focus;
     display: grid;
@@ -511,14 +525,84 @@ body {
     grid-area: 2/9/3/13;
 }
 
-.card {
-}
-
 .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
+.card {
+    transition: all 0.3s ease-out;
+	overflow: hidden;
+}
+
+.card_image {
+
+}
+
+.card_info {
+
+}
+
+.card:hover .card_info {
+
+}
+/****/
+
+.card {
+	transition: all 0.3s ease-out;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+    height: 100%;
+}
+
+.card__info {
+    background: rgba(51, 51, 51, 0.8);
+    font-family: 'Bree Serif', serif;
+    transition: all 0.3s ease-out;
+    transform: translateX(-100%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 10px 30px 10px 30px;
+}
+
+.card__info h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFF;
+}
+
+.card__info a {
+    text-decoration: none;
+}
+
+.card__info p {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+.card:hover .card__info{transform: translateX(0);}
+
+.card:hover img {transition: all 0.3s ease-out;}
+.card:hover img {transform: scale(1.2, 1.2);}
+
+/****/
 
 .projects_button {
     grid-area: projects_button;
@@ -540,6 +624,7 @@ body {
 
 .contact-form__subtitle {
     grid-area: contact-form__subtitle;
+    margin-bottom: 20px;
 }
 
 .contact-form__inputs {
@@ -889,3 +974,4 @@ body {
 
 
 /* == Конец Certifications page======================================= */
+
