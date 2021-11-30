@@ -468,6 +468,7 @@ body {
     font-weight: 300;
     color: #BDBDBD;
 }
+
 /* Конец FOCUS*/
 
 /* Блок PROJECTS*/
@@ -490,7 +491,7 @@ body {
     grid-area: projects_presentation;
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(12, minmax(60px,1fr));
+    grid-template-columns: repeat(12, minmax(60px, 1fr));
     grid-template-rows: repeat (2, 1fr);
 }
 
@@ -501,18 +502,20 @@ body {
 .projects__card_two {
     grid-area: 1/7/2/13;
 }
+
 .projects__card_three {
     grid-area: 2/1/3/4;
 }
+
 .projects__card_four {
     grid-area: 2/4/3/9;
 }
+
 .projects__card_five {
     grid-area: 2/9/3/13;
 }
 
-.card {
-}
+.card {}
 
 .card img {
     width: 100%;
@@ -524,6 +527,7 @@ body {
     grid-area: projects_button;
     margin-top: 30px;
 }
+
 /* Конец PROJECTS*/
 
 /* Блок CONTACT-FORM*/
@@ -755,12 +759,8 @@ body {
 }
 
 .gallery__title {
-    grid-area: "gallery__title";
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 148px;
     margin-bottom: 25px;
+    margin-top: 25px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 700;
@@ -779,9 +779,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 30px;
-    /* max-height: 550px; */
     padding-top: 30px;
-    /* padding-bottom: 10px; */
     border-top: 1px solid rgba(242, 242, 242, 1);
 }
 
@@ -859,6 +857,11 @@ body {
     grid-area: main;
 }
 
+.certifications_wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
 .certifications__title {
     display: flex;
     flex-direction: column;
@@ -876,15 +879,22 @@ body {
     color: #BDBDBD;
 }
 
+.certifications_photo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .certifications__numbers {
     margin-right: 20px;
 }
 
 .certifications__slide {
-    grid-area: "gallery__slide";
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     height: 230px;
+    /* padding-bottom: 50px; */
 }
 
 
