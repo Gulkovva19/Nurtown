@@ -739,16 +739,16 @@ body {
 
 
 /* ==GALLERY===============================================================*/
+
 .main-gallery {
     grid-area: main;
 }
 
 .gallery__wrapper {
-    width: 1170px;
-    height: 1035px;
+    max-width: 1170px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1035px;
+    grid-template-columns: 1fr;
     grid-template-rows: "gallery__title"
         "gallery__photo"
         "gallery__slide";
@@ -763,7 +763,7 @@ body {
     margin-bottom: 25px;
     font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 64px;
     line-height: 64px;
     color: #333333;
@@ -777,10 +777,9 @@ body {
 .gallery__photo {
     grid-area: "gallery__photo";
     display: grid;
-    grid-template-columns: repeat(5, 210px);
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 30px;
-    width: 1170px;
-    height: 550px;
+    /* max-height: 550px; */
     padding-top: 30px;
     /* padding-bottom: 10px; */
     border-top: 1px solid rgba(242, 242, 242, 1);
@@ -808,8 +807,6 @@ body {
     letter-spacing: 0em;
     text-align: left;
     color: rgba(189, 189, 189, 1);
-
-
 }
 
 .number_active {
@@ -832,12 +829,13 @@ body {
     cursor: pointer;
 }
 
+/* Стили для кнопок-стрелочек */
 .arrow {
     width: 53px;
     height: 53px;
     width: 19px;
     height: 8px;
-    color: 333333;
+    color: #333333;
     padding: 22px 17px;
     border: 1px solid #F3F3F3;
 
@@ -847,6 +845,7 @@ body {
     background-color: #F9F9F9;
 }
 
+/* Кликабельные ссылки телефона и мейла */
 .footer__contacts-link {
     color: #F3F3F3;
     text-decoration: none;
@@ -856,13 +855,17 @@ body {
 
 /* == Начало Certifications page====================================== */
 
+.main-certifications {
+    grid-area: main;
+}
+
 .certifications__title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 64px;
     line-height: 64px;
     color: #333333;
@@ -873,9 +876,15 @@ body {
     color: #BDBDBD;
 }
 
-.certifications__slide {
-    display: flex;
+.certifications__numbers {
+    margin-right: 20px;
+}
 
+.certifications__slide {
+    grid-area: "gallery__slide";
+    display: flex;
+    align-items: center;
+    height: 230px;
 }
 
 
