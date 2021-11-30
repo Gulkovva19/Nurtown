@@ -10,7 +10,6 @@ body {
 }
 
 .contact-form {
-    grid-area: contact-form;
     display: grid;
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 469px) minmax(1rem, 1fr);
     grid-template-areas:
