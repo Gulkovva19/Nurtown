@@ -891,6 +891,11 @@ body {
     background-color: #F9F9F9;
 }
 
+.footer__contacts-link {
+    color: #F3F3F3;
+    text-decoration: none;
+}
+
 /* == Конец Gallery=================================================== */
 
 /* == Начало Certifications page====================================== */
