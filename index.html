@@ -16,11 +16,7 @@
 
         <header class="header">
             <a href class="header__logo">
-                <picture>
-                    <source media="(min-width: 768px)" srcset="assets/images/logo-noletters.svg">
-                    <source media="(max-width: 767px)" srcset="assets/images/logo-noletters.svg">
-                    <img src="assets/images/logo.svg" alt="company logo" style="width:auto;">
-                </picture>
+                <img src="assets/images/logowithoutletters.svg" alt="company logo">
             </a>
             <nav class="header__menu menu">
                 <ul class="header__list">
@@ -137,19 +133,59 @@
                 <h2 class="projects_subtitle subtitle">Our Projects</h2>
                 <div class="projects_presentation">
                     <div class="projects__card_one card">
-                        <a href=""><img class="card_img" src="assets/images/projects/project-1.png" alt=""></a>
+                        <a class="card__image" href=""><img src="assets/images/projects/project-1.png" alt=""></a>
+                        <div class="card__info">
+                            <a href="">
+                                <h3>Sample <br> Project</h3>
+                            </a>
+                            <a href="">
+                                <p>View more →</p>
+                            </a>
+                        </div>
                     </div>
                     <div class="projects__card_two card">
-                        <a href=""><img class="card_img" src="assets/images/projects/project-2.png" alt=""></a>
+                        <a class="card__image" href=""><img src="assets/images/projects/project-2.png" alt=""></a>
+                        <div class="card__info">
+                            <a href="">
+                                <h3>Sample <br>Project 1</h3>
+                            </a>
+                            <a href="">
+                                <p>View more →</p>
+                            </a>
+                        </div>
                     </div>
                     <div class="projects__card_three card">
-                        <a href=""><img class="card_img" src="assets/images/projects/project-3.png" alt=""></a>
+                        <a class="card__image" href=""><img src="assets/images/projects/project-3.png" alt=""></a>
+                        <div class="card__info">
+                            <a href="">
+                                <h3>Sample <br>Project 2</h3>
+                            </a>
+                            <a href="">
+                                <p>View more →</p>
+                            </a>
+                        </div>
                     </div>
                     <div class="projects__card_four card">
-                        <a href=""><img class="card_img" src="assets/images/projects/project-4.png" alt=""></a>
+                        <a class="card__image" href=""><img src="assets/images/projects/project-4.png" alt=""></a>
+                        <div class="card__info">
+                            <a href="">
+                                <h3>Sample <br>Project 3</h3>
+                            </a>
+                            <a href="">
+                                <p>View more →</p>
+                            </a>
+                        </div>
                     </div>
                     <div class="projects__card_five card">
-                        <a href=""><img class="card_img" src="assets/images/projects/project-5.png" alt=""></a>
+                        <a class="card__image" href=""><img src="assets/images/projects/project-5.png" alt=""></a>
+                        <div class="card__info">
+                            <a href="">
+                                <h3>Sample <br>Project 4</h3>
+                            </a>
+                            <a href="">
+                                <p>View more →</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="projects_button button_black">
@@ -168,11 +204,11 @@
                             tabindex="1" />
                     </div>
                     <div>
-                        <input class="contact-input" type="tel" name="userphone" value="" placeholder="Phone number"
+                        <input class="contact-input" type="tel" name="userphone" value="" placeholder="Phone number *"
                             tabindex="2" required />
                     </div>
                     <div>
-                        <input class="contact-input" type="text" name="usermail" value="" placeholder="E-mail"
+                        <input class="contact-input" type="text" name="usermail" value="" placeholder="E-mail *"
                             tabindex="3" required />
                     </div>
                     <div>
@@ -181,7 +217,7 @@
                     </div>
                     <div>
                         <textarea class="contact-input_big" name="comment" id="" cols="30" rows="8"
-                            placeholder="Message" tabindex="5" required></textarea>
+                            placeholder="Message *" tabindex="5" required> </textarea>
                     </div>
                     <div class="contact-form__privacy">
                         <p><input type="checkbox" name="privacy" value="OK" tabindex="6" required /> You agree to the
