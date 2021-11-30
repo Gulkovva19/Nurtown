@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="/assets/styles/normalize.css" type="text/css">
-    <link rel="stylesheet" href="/assets/styles/styles.css" type="text/css">
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="assets/styles/contacts.css">
     <link rel="shortcut icon" href="assets/images/favicon.png">
-
+    <title>Nurtown Architects</title>
 </head>
 
 <body>
     <div class="wrapper">
+
         <header class="header">
             <a href class="header__logo">
                 <picture>
@@ -46,58 +46,27 @@
             </div>
         </header>
 
-        <main class="main-gallery">
-            <div class="gallery__wrapper">
-                <h1 class="gallery__title">
-                    <div class="gallery__title_gray">Photo</div>
-                    <div class="gallery__title_black">Gallery</div>
-                </h1>
-                <div class="gallery__photo">
-                    <div class="photo photo_one">
-                        <img src="/assets/images/gallery/gallery_photo_one.png" alt="">
-                        <p>Description or explanation for the image.</p>
+        <main class="main">
+            <div class="contact-wrraper">
+                <div class="contacts">
+                    <h1><span style="font-weight: 300; color: #BDBDBD;">Contact</span>
+                        <span style="font-weight: 700; color: #333333;">Information</span>
+                    </h1>
+                    <div>
+                        <p>Company Name</p>
+                        <p style="font-size: 16px; font-weight: 300; margin-top: 0;">1234 Sample Street Austin Texas 76401</p>
                     </div>
-                    <div class="photo photo_two">
-                        <img src="/assets/images/gallery/gallery_photo_two.png" alt="">
-                    </div>
-                    <div class="photo photo_three">
-                        <img src="/assets/images/gallery/gallery_photo_three.png" alt="">
-                    </div>
-                    <div class="photo photo_four">
-                        <img src="/assets/images/gallery/gallery_photo_four.png" alt="">
-                    </div>
-                    <div class="photo photo_five">
-                        <img src="/assets/images/gallery/gallery_photo_five.png" alt="">
-                    </div>
-                    <div class="photo photo_six">
-                        <img src="/assets/images/gallery/gallery_photo_six.png" alt="">
-                    </div>
-                    <div class="photo photo_seven">
-                        <img src="/assets/images/gallery/gallery_photo_seven.png" alt="">
-                    </div>
-                    <div class="photo photo_eight">
-                        <img src="/assets/images/gallery/gallery_photo_eight.png" alt="">
-                    </div>
-                    <div class="photo photo_nine">
-                        <img src="/assets/images/gallery/gallery_photo_nine.png" alt="">
-                    </div>
-                    <div class="photo photo_ten">
-                        <img src="/assets/images/gallery/gallery_photo_ten.png" alt="">
-                    </div>
-                </div>
-                <div class="gallery__slide">
-                    <div class="gallery__numbers numbers">
-                        <p class="gallery__number number_active numbers">01</p>
-                        <img class="numbers__line" src="./assets/images/main_page/slide_line.svg" alt="slide_line">
-                        <p class="gallery__number numbers">05</p>
-                    </div>
-                    <div class="gallery_arrows">
-                        <button class="gallery_button btn-reset"><img class="arrow arrow_left " src="/assets/images/gallery/arrow_left.svg" alt="strelochka"></button>
-                        <button class="gallery_button btn-reset"><img class="arrow arrow_right" src="/assets/images/gallery/arrow_right.svg" alt="strelochka"></button>
-                    </div>
+                        <p>512.333.2222</p>
+                        <a href="mailto:someone@example.com">sampleemail@gmail.com</a>
+                        <button type="button">Contact us</button>
+                </div>    
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.645070027759!2d-97.71068818467964!3d30.275692535598246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b5c2d3ebab81%3A0xb813db7ead159156!2zMjgxMiBFIDEydGggU3QsIEF1c3RpbiwgVFggNzg3MDIsINCh0KjQkA!5e0!3m2!1sru!2sua!4v1637949901793!5m2!1sru!2sua" width="655" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <!-- <img src="assets/images/Contacts/map.png" alt="map"> -->
                 </div>
             </div>
-        </main>
+        </main>    
+
         <footer class="footer">
             <div class="footer__logo">
                 <img class="footer__image" src="./assets/images/white-logo.svg" alt="logo">
@@ -134,12 +103,12 @@
                     <div class="footer__items">
                         <img class="footer__contacts-icon" src="./assets/images/main_page/contacts02.svg"
                             alt="contacts02">
-                        <a href="tel:+77017776811" class="footer__contacts-link">+7 (701) 77 76 811</a>
+                        <p>+7 (701) 77 76 811</p>
                     </div>
                     <div class="footer__items">
                         <img class="footer__contacts-icon" src="./assets/images/main_page/contacts03.svg"
                             alt="contacts03">
-                        <a href="mailto:Galym.sultanov@mail.ru" class="footer__contacts-link">Galym.sultanov@mail.ru</a>
+                        <p>Galym.sultanov@mail.ru</p>
                     </div>
                 </div>
             </div>
@@ -157,7 +126,7 @@
             </div>
         </footer>
 
-    </div>
-</body>
+</div>
 
+</body>
 </html>
