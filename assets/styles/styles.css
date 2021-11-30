@@ -20,20 +20,6 @@ body {
         "footer";
 }
 
-/*
-._ibg {
-    position: relative;
-}
-
-._ibg img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-}
-
 /*==HEADER================================================================*/
 .header {
     grid-area: header;
@@ -414,10 +400,10 @@ body {
     grid-area: focus;
     display: grid;
     margin-bottom: 120px;
-    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 140px) minmax(auto, 320px) minmax(auto, 170px) minmax(auto, 140px) minmax(auto, 400px) minmax(1rem, 1fr);
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1170px) minmax(1rem, 1fr);
     grid-template-areas:
-        ". focus_subtitle focus_subtitle focus_subtitle focus_subtitle focus_subtitle ."
-        ". focus__number_1 focus_text_1 . focus__number_2 focus_text_2 .";
+        ". focus_subtitle ."
+        ". focus__container .";
 
 }
 
@@ -425,21 +411,28 @@ body {
     grid-area: focus_subtitle;
 }
 
-.focus__number_1 {
-    grid-area: focus__number_1;
+.focus__container {
+    grid-area: focus__container;
+    display: grid;
+    grid-template: 1fr / 10.5% 37.5% 14.5% 37.5%;
+    align-items: stretch;
 }
 
-.focus__number_2 {
-    grid-area: focus__number_2;
+
+.focus__number_1 {
+    grid-area: 1/1/2/2;
 }
 
 .focus_text_1 {
-    grid-area: focus_text_1;
-    align-items: center;
+    grid-area: 1/2/2/3;
+}
+
+.focus__number_2 {
+    grid-area: 1/3/2/4;
 }
 
 .focus_text_2 {
-    grid-area: focus_text_2;
+    grid-area: 1/4/2/5;
 }
 
 .text {
@@ -450,9 +443,9 @@ body {
     line-height: 140%;
     text-align: left;
     color: #333333;
-    margin-left: 30px;
     margin-top: 0px;
     margin-bottom: 0px;
+    padding-right: 10px;
 }
 
 .number {
@@ -461,7 +454,7 @@ body {
     font-style: normal;
     font-weight: 900;
     line-height: 70%;
-    text-align: left;
+    text-align: center;
     color: #F2F2F2;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -475,34 +468,6 @@ body {
     font-weight: 300;
     color: #BDBDBD;
 }
-
-@media screen and (max-width:1024px) {
-    .about {
-        margin-bottom: 0px;
-    }
-
-    .focus {
-        margin: 0px 25px;
-    }
-
-    .subtitle {
-        font-size: 54px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .text {
-        font-size: 18px;
-        margin-left: 0px;
-    }
-
-    .number {
-        font-size: 140px;
-        margin-left: 0px;
-        text-align: left;
-    }
-}
-
 /* Конец FOCUS*/
 
 /* Блок PROJECTS*/
@@ -525,35 +490,31 @@ body {
     grid-area: projects_presentation;
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(12, minmax(60px,1fr));
+    grid-template-rows: repeat (2, 1fr);
 }
 
-.projects__item {
-    position: relative;
-    padding: 0px 0px 85% 0px;
+.projects__card_one {
+    grid-area: 1/1/2/7;
 }
 
-.projects__item_big {
-    grid-column: span 2;
+.projects__card_two {
+    grid-area: 1/7/2/13;
+}
+.projects__card_three {
+    grid-area: 2/1/3/4;
+}
+.projects__card_four {
+    grid-area: 2/4/3/9;
+}
+.projects__card_five {
+    grid-area: 2/9/3/13;
 }
 
-.projects__item_small {
-    grid-column: span 0.95;
+.card {
 }
 
-.projects__item_middleplus {
-    grid-column: span 1.65;
-}
-
-.projects__item_middle {
-    grid-column: span 1.4;
-    margin-left: -37%;
-}
-
-.projects__item img {
-    position: absolute;
-    top: 0;
-    left: 0;
+.card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -563,7 +524,6 @@ body {
     grid-area: projects_button;
     margin-top: 30px;
 }
-
 /* Конец PROJECTS*/
 
 /* Блок CONTACT-FORM*/
@@ -588,15 +548,12 @@ body {
 
 .contact-form__image {
     grid-area: contact-form__image;
-    position: relative;
+    overflow: hidden;
 }
 
 .contact-form__image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -633,8 +590,6 @@ body {
     resize: none;
     box-sizing: border-box;
 }
-
-.contact-form__image {}
 
 .contact-form__privacy {
     font-size: 12px;
