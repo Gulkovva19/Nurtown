@@ -251,6 +251,8 @@ body {
     align-items: flex-end;
     justify-content: flex-start;
     margin-left: 60px;
+    max-width: 770px;
+    overflow: hidden;
 }
 
 .button {
