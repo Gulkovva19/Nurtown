@@ -5,6 +5,7 @@
     /*также подумать - цвет оставляет этот только main или body тоже*/
     margin: auto;
     padding-bottom: 120px;
+    padding-top: 3px;
 }
 
 .main .contact-wrraper {
@@ -85,4 +86,8 @@
     line-height: 12px;
     font-weight: 400;
     padding: 30px 0 30px 0;
+}
+
+.main a.button:hover {
+    background: #525252;
 }
