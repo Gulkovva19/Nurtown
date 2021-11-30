@@ -20,6 +20,7 @@ body {
         "footer";
 }
 
+/*
 ._ibg {
     position: relative;
 }
@@ -63,7 +64,7 @@ body {
 
 .header__logo {
     grid-area: header__logo;
-    width: 70px;
+    width: 90px;
     padding-left: 15px;
     z-index: 3;
 }
@@ -356,6 +357,8 @@ body {
     width: 100%;
     grid-area: about__block;
     display: flex;
+    background-color: #FBFBFB;
+    padding-top: 30px;
 }
 
 .about__image {
@@ -367,6 +370,7 @@ body {
         "column_first column_third"
         "column_second column_third";
     margin-left: 100px;
+    height: 465px;
 }
 
 .about__column_first {
@@ -780,29 +784,31 @@ body {
 
 
 /* ==GALLERY===============================================================*/
+
 .main-gallery {
     grid-area: main;
-    display: grid;
-    min-height: 100%;
-    grid-template-columns: 1fr;
 }
 
 .gallery__wrapper {
     max-width: 1170px;
     margin: 0 auto;
     display: grid;
-    /* grid-template-columns: 1fr 3fr 1fr; */
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: "gallery__title"
+        "gallery__photo"
+        "gallery__slide";
 }
 
 .gallery__title {
-    /* grid-area: 1/2/2/3; */
+    grid-area: "gallery__title";
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 148px;
+    margin-bottom: 25px;
     font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 64px;
     line-height: 64px;
     color: #333333;
@@ -814,32 +820,89 @@ body {
 }
 
 .gallery__photo {
-    /* grid-area: 2/2/3/3; */
+    grid-area: "gallery__photo";
     display: grid;
-    grid-template-columns: repeat(5, minmax(auto, 210px));
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 30px;
+    /* max-height: 550px; */
+    padding-top: 30px;
+    /* padding-bottom: 10px; */
+    border-top: 1px solid rgba(242, 242, 242, 1);
 }
 
 
 .photo {
-    max-width: 210px;
-    max-height: 260px;
+    width: 210px;
+    height: 260px;
 }
 
 .gallery__slide {
-    /* grid-area: 3/2/4/3; */
+    grid-area: "gallery__slide";
     display: flex;
     align-items: center;
+    height: 230px;
+}
+
+.gallery__number {
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(189, 189, 189, 1);
 }
 
 .number_active {
     color: #333333;
-    ;
+}
+
+.gallery_button {
+    margin: 10px;
+}
+
+.gallery__numbers {
+    margin-right: 20px;
+}
+
+/* Сброс стилей кнопки */
+.btn-reset {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Стили для кнопок-стрелочек */
+.arrow {
+    width: 53px;
+    height: 53px;
+    width: 19px;
+    height: 8px;
+    color: #333333;
+    padding: 22px 17px;
+    border: 1px solid #F3F3F3;
+
+}
+
+.arrow:active {
+    background-color: #F9F9F9;
+}
+
+/* Кликабельные ссылки телефона и мейла */
+.footer__contacts-link {
+    color: #F3F3F3;
+    text-decoration: none;
 }
 
 /* == Конец Gallery=================================================== */
 
 /* == Начало Certifications page====================================== */
+
+.main-certifications {
+    grid-area: main;
+}
 
 .certifications__title {
     display: flex;
@@ -847,7 +910,7 @@ body {
     justify-content: center;
     font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 64px;
     line-height: 64px;
     color: #333333;
@@ -858,9 +921,15 @@ body {
     color: #BDBDBD;
 }
 
-.certifications__slide {
-    display: flex;
+.certifications__numbers {
+    margin-right: 20px;
+}
 
+.certifications__slide {
+    grid-area: "gallery__slide";
+    display: flex;
+    align-items: center;
+    height: 230px;
 }
 
 

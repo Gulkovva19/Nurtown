@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <link rel="stylesheet" href="assets/styles/styles-question.css">
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <title>Nurtown Architects</title>
+</head>
+
+<body>
+    <div class="contact-form">
+        <h2 class="contact-form__subtitle">Ask a question</h2>
+        <form class="contact-form__inputs" action="#" method="get">
+            <div>
+                <input class="contact-input" type="text" name="username" value="" placeholder="Name" tabindex="1" />
+            </div>
+            <div>
+                <input class="contact-input" type="tel" name="userphone" value="" placeholder="Phone number"
+                    tabindex="2" required />
+            </div>
+            <div>
+                <input class="contact-input" type="text" name="usermail" value="" placeholder="E-mail" tabindex="3"
+                    required />
+            </div>
+            <div>
+                <input class="contact-input" type="text" name="servicetype" value="" placeholder="Service"
+                    tabindex="4" />
+            </div>
+            <div>
+                <textarea class="contact-input_big" name="comment" id="" cols="30" rows="8" placeholder="Message"
+                    tabindex="5" required></textarea>
+            </div>
+            <div class="contact-form__privacy">
+                <p><input type="checkbox" name="privacy" value="OK" tabindex="6" required /> You agree to the privacy
+                    policy</p>
+            </div>
+            <button class="contact-form__button" type="submit" tabindex="7">
+                Send E-mail<img class="button__shape" src="./assets/images/main_page/ico_shape_white.svg"
+                    alt="arrow-icon">
+            </button>
+        </form>
+
+    </div>
+</body>
+
+</html>
