@@ -614,6 +614,59 @@ body {
     margin-top: 30px;
 }
 
+@media screen and (max-width: 767px){
+    .projects {
+        grid-area: projects;
+        display: grid;
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 747px) minmax(1rem, 1fr);
+        grid-template-areas:
+            ". projects_subtitle ."
+            ". projects_presentation ."
+            ". projects_button .";
+}
+
+
+.projects_subtitle {
+    grid-area: projects_subtitle;
+}
+
+.projects_button {
+    grid-area: projects_button;
+}
+
+.projects_presentation {
+    grid-area: projects_presentation;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 40% 60%;
+    grid-template-areas:
+    "projects__card_one projects__card_one"
+    "projects__card_two projects__card_two"
+    "projects__card_three projects__card_five"
+    "projects__card_four projects__card_four";
+}
+
+.projects__card_one {
+    grid-area: projects__card_one;
+}
+
+.projects__card_two {
+    grid-area: projects__card_two;
+}
+
+.projects__card_three {
+    grid-area: projects__card_three;
+}
+
+.projects__card_four {
+    grid-area: projects__card_four;
+}
+
+.projects__card_five {
+    grid-area: projects__card_five;
+}
+}
+
 /* Конец PROJECTS*/
 
 /* Блок CONTACT-FORM*/
