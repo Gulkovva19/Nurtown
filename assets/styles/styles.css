@@ -707,6 +707,20 @@ body {
     justify-self: start;
 }
 
+@media screen and (max-width: 767px){
+    .contact-form__image {
+        display:none;
+    }
+
+    .contact-form {
+        grid-area: contact-form;
+        display: grid;
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 747px) minmax(1rem, 1fr);
+        grid-template-areas:
+            ". contact-form__subtitle ."
+            ". contact-form__inputs .";
+}
+
 /* Конец CONTACT-FORM*/
 
 /* блок FOOTER*/
