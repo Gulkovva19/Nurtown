@@ -215,7 +215,6 @@ body {
 .main {
     grid-area: main;
     display: grid;
-    min-height: 100%;
     grid-template-columns: 1fr;
     grid-template-areas:
         "intro"
