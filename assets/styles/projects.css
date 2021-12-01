@@ -1,0 +1,161 @@
+.main {
+    width: 80%;
+    background: #FFFFFF;
+    /*подумать - цвет оставляет этот только main или body тоже*/
+    margin: auto;
+    max-height: 2450px;
+    padding: 67px 0 120px 0;
+}
+
+.main h1 {
+    margin: 0 0 57px 0;
+    ;
+    height: 128px;
+    width: 278px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 64px;
+    line-height: 64px;
+}
+
+.main .block-project {
+    /* height: 1422px; */
+    min-height: 1422px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main .block-project .project {
+    /* border: 1px solid black; удалить после верстки блока */
+    background: #FBFBFB;
+    max-height: 435px;
+    display: grid;
+    grid-template-columns: 0.57fr 0.43fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+}
+
+/* .main .block-project .project img {
+    grid-area: 1/1/4/3;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+} */
+
+.main .block-project .project img {
+    grid-area: 1/1/4/2;
+    max-height: 100%;
+    width: 100%;
+}
+
+.main h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 46.88px;
+    color: #BDBDBD;
+}
+
+.main p.text {
+    max-width: 400px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+    color: #000000;
+}
+
+.main a.button__view {
+    border: 1px solid #FFFFFF;
+    height: 71px;
+    /* max-height: 71px;
+    height: auto; */
+    width: 222px;
+    /* display: inline-block; */
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: rgba(51, 51, 51, 1);
+    background: #FFFFFF;
+}
+
+.main a.button__view svg {
+    margin-left: 20px;
+}
+
+.main a.button__view:hover {
+    background: #F4F4F4;
+    box-shadow: inset 0 0 4px rgba(51, 51, 51, 0.35);
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+/* .main .button:hover {
+    background:#F4F4F4; 
+    box-shadow: 0 0 4px rgba(51, 51, 51, 0.3) inset;
+} */
+
+.main .slide-number__wrapper {
+    max-width: 27%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.main .slide-number {
+    min-width: 50%;
+    /* width: 160px; */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+
+footer {
+    height: 404px;
+    background: bisque;
+}
+
+.main .slide-arrow {
+    max-width: 129px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main .slide-arrow .button__slide {
+    border: 1px solid #DADADA;
+    min-height: 53px;
+    min-width: 53px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.main .slide-arrow .button__slide:hover {
+    background: #F4F4F4;
+    box-shadow: inset 0 0 4px rgba(51, 51, 51, 0.35);
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+}
