@@ -196,7 +196,7 @@
                 </div>
             </div>
 
-            <div class="contact-form">
+            <div class="contact-form" id="contact-form">
                 <h2 class="contact-form__subtitle subtitle">Contact us</h2>
                 <form class="contact-form__inputs" action="#" method="get">
                     <div>
@@ -223,9 +223,9 @@
                         <p><input type="checkbox" name="privacy" value="OK" tabindex="6" required /> You agree to the
                             privacy policy</p>
                     </div>
-                    <button class="contact-form__button" type="submit" tabindex="7">
-                        Send E-mail<img class="button__shape" src="./assets/images/main_page/ico_shape_white.svg"
-                            alt="arrow-icon">
+                    <button class="contact-form__button button_black" type="submit" tabindex="7"><a href="#popup_spasibo">
+                        Send Message<img class="button__shape" src="./assets/images/main_page/ico_shape_white.svg"
+                            alt="arrow-icon"></a>
                     </button>
                 </form>
                 <div class="contact-form__image">
@@ -293,8 +293,22 @@
                 </div>
             </div>
         </footer>
-
     </div>
+
+    <div id="popup_spasibo" class="popup">
+        <a href="#contact-form" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#contact-form" class="popup__close">X</a>
+                <img src="assets/images/popup-success.png" alt="">
+                <div class="popup__title">Your message has been sent!</div>
+                <div class="popup__text">Thank you for getting in touch, we always try our best to respond as soon as possible, you can expect a reply in at most 48 hours.</div>
+                <div class="popup__button button_black"><a href="#contact-form">Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="http://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>

@@ -215,7 +215,6 @@ body {
 .main {
     grid-area: main;
     display: grid;
-    min-height: 100%;
     grid-template-columns: 1fr;
     grid-template-areas:
         "intro"
@@ -232,7 +231,7 @@ body {
     grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
     grid-template-areas:
         ". intro__block .";
-    margin-bottom: 120px;
+    padding-bottom: 120px;
 }
 
 .intro__block {
@@ -244,9 +243,9 @@ body {
 }
 
 .intro__image {
-    background-image: url('/assets/images/main_page/main_image.png');
+    background-image: url("../images/main_page/main_image.png");
     height: 829px;
-    width: 100%;
+    width: 70%;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -299,6 +298,7 @@ body {
 .intro__description {
     display: grid;
     grid-template-rows: 3fr 1fr 1fr;
+    width: 30%;
 }
 
 .intro__title {
@@ -337,12 +337,13 @@ body {
 
 
 /* Блок ABOUT */
+
 .about {
     grid-area: about;
     display: grid;
     grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
     grid-template-areas: ". about__block .";
-    margin-bottom: 120px;
+    padding-bottom: 120px;
 }
 
 .about__block {
@@ -393,7 +394,6 @@ body {
 
 .about__text {
     width: 100%;
-    height: 200px;
     font-weight: 300;
     font-size: 16px;
     line-height: 25px;
@@ -403,6 +403,9 @@ body {
     width: 100%;
     margin-left: 30px;
 }
+
+
+
 
 /* Конец ABOUT */
 
@@ -427,7 +430,6 @@ body {
     grid-template-areas:
         ". focus_subtitle ."
         ". focus__container .";
-
 }
 
 .focus_subtitle {
@@ -492,6 +494,28 @@ body {
     color: #BDBDBD;
 }
 
+@media screen and (max-width: 767px) {
+    .focus {
+        grid-area: focus;
+        display: grid;
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 747px) minmax(1rem, 1fr);
+        grid-template-areas:
+            ". focus_subtitle ."
+            ". focus__container .";
+    }
+
+    .number {
+        font-size: 150px;
+    }
+
+    .text {
+        font-size: 16px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-right: 10px;
+    }
+}
+
 /* Конец FOCUS*/
 
 /* Блок PROJECTS*/
@@ -548,14 +572,6 @@ body {
     transition: all 0.3s ease-out;
     overflow: hidden;
 }
-
-.card_image {}
-
-.card_info {}
-
-.card:hover .card_info {}
-
-/****/
 
 .card {
     transition: all 0.3s ease-out;
@@ -617,11 +633,63 @@ body {
     transform: scale(1.2, 1.2);
 }
 
-/****/
-
 .projects_button {
     grid-area: projects_button;
     margin-top: 30px;
+}
+
+@media screen and (max-width: 767px) {
+    .projects {
+        grid-area: projects;
+        display: grid;
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 747px) minmax(1rem, 1fr);
+        grid-template-areas:
+            ". projects_subtitle ."
+            ". projects_presentation ."
+            ". projects_button .";
+    }
+
+
+    .projects_subtitle {
+        grid-area: projects_subtitle;
+    }
+
+    .projects_button {
+        grid-area: projects_button;
+        justify-self: left;
+    }
+
+    .projects_presentation {
+        grid-area: projects_presentation;
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 40% 60%;
+        grid-template-areas:
+            "projects__card_one projects__card_one"
+            "projects__card_two projects__card_two"
+            "projects__card_three projects__card_five"
+            "projects__card_four projects__card_four";
+    }
+
+    .projects__card_one {
+        grid-area: projects__card_one;
+    }
+
+    .projects__card_two {
+        grid-area: projects__card_two;
+    }
+
+    .projects__card_three {
+        grid-area: projects__card_three;
+    }
+
+    .projects__card_four {
+        grid-area: projects__card_four;
+    }
+
+    .projects__card_five {
+        grid-area: projects__card_five;
+    }
 }
 
 /* Конец PROJECTS*/
@@ -715,6 +783,21 @@ body {
     line-height: 85%;
     padding: 30px 47px;
     justify-self: start;
+}
+
+@media screen and (max-width: 767px) {
+    .contact-form__image {
+        display: none;
+    }
+
+    .contact-form {
+        grid-area: contact-form;
+        display: grid;
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 747px) minmax(1rem, 1fr);
+        grid-template-areas:
+            ". contact-form__subtitle ."
+            ". contact-form__inputs .";
+    }
 }
 
 /* Конец CONTACT-FORM*/
@@ -1002,3 +1085,98 @@ body {
 }
 
 /* ==Конец Project1 ================================================== */
+
+/* == Начало Pop-Up Спасибо ================================================ */
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+
+.popup__area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup:target .popup__content {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.popup__content {
+    background-color: #FFF;
+    color: black;
+    max-width: 516px;
+    padding: 30px;
+    position: relative;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: translate(0px, -100%);
+    text-align: center;
+}
+
+.popup__content img {
+    max-width: 142px;
+}
+
+
+.popup__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.contact-form__button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.popup__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 92%;
+    letter-spacing: 0.03em;
+    margin-top: 24px;
+    margin-bottom: 27px;
+    color: #333333;
+}
+
+.popup__text {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 158%;
+    letter-spacing: 0.03em;
+    color: #4F4F4F;
+    margin-bottom: 41px;
+}
+}
+
+/* == Конец Pop-Up Спасибо ================================================ */
