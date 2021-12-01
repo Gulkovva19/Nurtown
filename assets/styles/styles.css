@@ -795,6 +795,7 @@ body {
             ". contact-form__subtitle ."
             ". contact-form__inputs .";
 }
+}
 
 /* Конец CONTACT-FORM*/
 
@@ -1172,12 +1173,6 @@ letter-spacing: 0.03em;
 color: #4F4F4F;
 margin-bottom: 41px;
 }
-
-
-height: 421px;
-width: 516px;
-left: 2887px;
-top: -843px;
-border-radius: 0px;
+}
 
 /* == Конец Pop-Up Спасибо ================================================ */
