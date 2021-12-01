@@ -427,7 +427,6 @@ body {
     grid-template-areas:
         ". focus_subtitle ."
         ". focus__container .";
-
 }
 
 .focus_subtitle {
@@ -490,6 +489,28 @@ body {
     text-align: left;
     font-weight: 300;
     color: #BDBDBD;
+}
+
+@media screen and (max-width: 767px){
+    .focus {
+        grid-area: focus;
+        display: grid;
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 747px) minmax(1rem, 1fr);
+        grid-template-areas:
+            ". focus_subtitle ."
+            ". focus__container .";
+    }
+
+    .number {
+        font-size: 150px;
+    }
+
+    .text {
+        font-size: 16px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-right: 10px;
+    }
 }
 
 /* Конец FOCUS*/
@@ -632,12 +653,13 @@ body {
 
 .projects_button {
     grid-area: projects_button;
+    justify-self: left;
 }
 
 .projects_presentation {
     grid-area: projects_presentation;
     display: grid;
-    gap: 30px;
+    gap: 15px;
     grid-template-columns: 40% 60%;
     grid-template-areas:
     "projects__card_one projects__card_one"
