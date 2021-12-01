@@ -232,7 +232,7 @@ body {
     grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
     grid-template-areas:
         ". intro__block .";
-    margin-bottom: 120px;
+    padding-bottom: 120px;
 }
 
 .intro__block {
@@ -244,9 +244,9 @@ body {
 }
 
 .intro__image {
-    background-image: url('/assets/images/main_page/main_image.png');
+    background-image: url("../images/main_page/main_image.png");
     height: 829px;
-    width: 100%;
+    width: 70%;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -299,6 +299,7 @@ body {
 .intro__description {
     display: grid;
     grid-template-rows: 3fr 1fr 1fr;
+    width: 30%;
 }
 
 .intro__title {
@@ -337,12 +338,13 @@ body {
 
 
 /* Блок ABOUT */
+
 .about {
     grid-area: about;
     display: grid;
     grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
     grid-template-areas: ". about__block .";
-    margin-bottom: 120px;
+    padding-bottom: 120px;
 }
 
 .about__block {
@@ -393,7 +395,6 @@ body {
 
 .about__text {
     width: 100%;
-    height: 200px;
     font-weight: 300;
     font-size: 16px;
     line-height: 25px;
@@ -403,6 +404,9 @@ body {
     width: 100%;
     margin-left: 30px;
 }
+
+
+
 
 /* Конец ABOUT */
 
@@ -491,7 +495,7 @@ body {
     color: #BDBDBD;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
     .focus {
         grid-area: focus;
         display: grid;
@@ -635,7 +639,7 @@ body {
     margin-top: 30px;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
     .projects {
         grid-area: projects;
         display: grid;
@@ -644,49 +648,49 @@ body {
             ". projects_subtitle ."
             ". projects_presentation ."
             ". projects_button .";
-}
+    }
 
 
-.projects_subtitle {
-    grid-area: projects_subtitle;
-}
+    .projects_subtitle {
+        grid-area: projects_subtitle;
+    }
 
-.projects_button {
-    grid-area: projects_button;
-    justify-self: left;
-}
+    .projects_button {
+        grid-area: projects_button;
+        justify-self: left;
+    }
 
-.projects_presentation {
-    grid-area: projects_presentation;
-    display: grid;
-    gap: 15px;
-    grid-template-columns: 40% 60%;
-    grid-template-areas:
-    "projects__card_one projects__card_one"
-    "projects__card_two projects__card_two"
-    "projects__card_three projects__card_five"
-    "projects__card_four projects__card_four";
-}
+    .projects_presentation {
+        grid-area: projects_presentation;
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 40% 60%;
+        grid-template-areas:
+            "projects__card_one projects__card_one"
+            "projects__card_two projects__card_two"
+            "projects__card_three projects__card_five"
+            "projects__card_four projects__card_four";
+    }
 
-.projects__card_one {
-    grid-area: projects__card_one;
-}
+    .projects__card_one {
+        grid-area: projects__card_one;
+    }
 
-.projects__card_two {
-    grid-area: projects__card_two;
-}
+    .projects__card_two {
+        grid-area: projects__card_two;
+    }
 
-.projects__card_three {
-    grid-area: projects__card_three;
-}
+    .projects__card_three {
+        grid-area: projects__card_three;
+    }
 
-.projects__card_four {
-    grid-area: projects__card_four;
-}
+    .projects__card_four {
+        grid-area: projects__card_four;
+    }
 
-.projects__card_five {
-    grid-area: projects__card_five;
-}
+    .projects__card_five {
+        grid-area: projects__card_five;
+    }
 }
 
 /* Конец PROJECTS*/
@@ -782,9 +786,9 @@ body {
     justify-self: start;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
     .contact-form__image {
-        display:none;
+        display: none;
     }
 
     .contact-form {
@@ -794,7 +798,7 @@ body {
         grid-template-areas:
             ". contact-form__subtitle ."
             ". contact-form__inputs .";
-}
+    }
 }
 
 /* Конец CONTACT-FORM*/
@@ -1111,7 +1115,7 @@ body {
     visibility: visible;
 }
 
-.popup:target .popup__content{
+.popup:target .popup__content {
     transform: translate(0px, 0px);
     opacity: 1;
 }
@@ -1126,7 +1130,7 @@ body {
 
 .popup__content {
     background-color: #FFF;
-    color:black;
+    color: black;
     max-width: 516px;
     padding: 30px;
     position: relative;
@@ -1146,11 +1150,11 @@ body {
     right: 10px;
     top: 10px;
     font-size: 20px;
-    color:black;
+    color: black;
     text-decoration: none;
 }
 
-.contact-form__button a{
+.contact-form__button a {
     text-decoration: none;
     color: #fff;
 }
@@ -1164,14 +1168,15 @@ body {
     margin-bottom: 27px;
     color: #333333;
 }
+
 .popup__text {
-font-size: 14px;
-font-style: normal;
-font-weight: 900;
-line-height: 158%;
-letter-spacing: 0.03em;
-color: #4F4F4F;
-margin-bottom: 41px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 158%;
+    letter-spacing: 0.03em;
+    color: #4F4F4F;
+    margin-bottom: 41px;
 }
 }
 
