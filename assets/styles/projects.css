@@ -1,5 +1,5 @@
 .main {
-    width: 80%;
+    min-width: 80%;
     background: #FFFFFF;
     /*подумать - цвет оставляет этот только main или body тоже*/
     margin: auto;
@@ -9,7 +9,6 @@
 
 .main h1 {
     margin: 0 0 57px 0;
-    ;
     height: 128px;
     width: 278px;
     font-family: 'Roboto', sans-serif;
@@ -41,7 +40,7 @@
     grid-area: 1/1/4/3;
     background-size: cover;
     height: 100%;
-    width: 100%;
+    width: 100%;dffgdfgdghjdghjdh
 } */
 
 .main .block-project .project img {
@@ -70,8 +69,8 @@
 .main a.button__view {
     border: 1px solid #FFFFFF;
     height: 71px;
-    /* max-height: 71px;
-    height: auto; */
+    max-height: 71px;
+    height: auto;
     width: 222px;
     /* display: inline-block; */
     margin-bottom: 24px;
@@ -126,11 +125,6 @@
     flex-direction: row;
     justify-content: space-between;
     margin-right: 5px;
-}
-
-footer {
-    height: 404px;
-    background: bisque;
 }
 
 .main .slide-arrow {
