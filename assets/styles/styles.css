@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
+/*== ОБЩЕЕ ДЛЯ ВСЕГО ДОКУМЕНТА===============================*/
+/* - Позиционирование -------------------------------------- */
 html,
 body {
     height: 100%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 22px;
-    font-weight: 400;
 }
 
 .wrapper {
@@ -19,33 +17,109 @@ body {
         "main"
         "footer";
 }
+/* - Типографика ------------------------------------------- */
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
 
-/*==HEADER================================================================*/
+/* - Типографика ------------------------------------------- */
+.subtitle {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 85%;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #BDBDBD;
+    margin: 0px;
+    padding-bottom: 60px;
+}
+
+.text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    text-align: left;
+    color: #333333;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .subtitle {
+        padding-bottom: 20px;
+    }
+}
+
+/* - Оформление: ссылки, кнопки ---------------------------- */
+.button {
+    background-color: white;
+    border: none;
+    font-size: 12px;
+    font-weight: 200;
+    color: #333333;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    line-height: 85%;
+    padding: 30px 47px;
+    justify-self: right;
+}
+
+.button a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.button_black {
+    background-color: #333333;
+    border: none;
+    font-size: 12px;
+    font-weight: 200;
+    color: #fffdfd;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    line-height: 85%;
+    padding: 30px 47px;
+    justify-self: right;
+}
+
+.button_black a {
+    text-decoration: none;
+    color: #fffdfd;
+}
+
+/*==HEADER===================================================*/
 .header {
     grid-area: header;
     align-items: center;
+    width: 100%;
+    min-height: 105px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    overflow: hidden;
     display: grid;
     grid-template-columns: 1fr minmax(auto, 400px) minmax(auto, 720px) minmax(auto, 50px) 1fr;
     grid-template-areas:
         ". header__logo header__menu header__burger .";
-    position: fixed;
-    overflow: hidden;
-    width: 100%;
-    min-height: 105px;
-    top: 0;
-    left: 0;
-    z-index: 50;
 }
 
 .header::before {
     content: '';
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
     z-index: 2;
+    background-color: white;
 }
 
 .header__logo {
@@ -56,8 +130,8 @@ body {
 }
 
 .header__logo img {
-    max-width: 100%;
     display: block;
+    max-width: 100%;
     object-fit: cover;
 }
 
@@ -207,9 +281,7 @@ body {
         line-height: 140%;
         text-align: center;
     }
-
 }
-
 
 /*==СЕКЦИЯ MAIN - ОСНОВНАЯ СТРАНИЦА ================================================================*/
 .main {
@@ -224,14 +296,24 @@ body {
         "contact-form";
 }
 
-/* Всё, что касается первого блока INTRO */
+.intro, .about, .focus, .projects, .contact-form {
+    margin-bottom: 120px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .intro, .about, .focus, .projects, .contact-form {
+        margin-bottom: 60px;
+    }
+}
+
+/* Блок INTRO */
 .intro {
     grid-area: intro;
     display: grid;
     grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
     grid-template-areas:
         ". intro__block .";
-    padding-bottom: 120px;
 }
 
 .intro__block {
@@ -254,46 +336,9 @@ body {
     overflow: hidden;
 }
 
-.button {
-    background-color: white;
-    border: none;
-    font-size: 12px;
-    font-weight: 200;
-    color: #333333;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    line-height: 85%;
-    padding: 30px 47px;
-    justify-self: right;
-}
-
-.button a {
-    text-decoration: none;
-    color: #333333;
-}
-
-.button_black {
-    background-color: #333333;
-    border: none;
-    font-size: 12px;
-    font-weight: 200;
-    color: #fffdfd;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    line-height: 85%;
-    padding: 30px 47px;
-    justify-self: right;
-}
-
-.button_black a {
-    text-decoration: none;
-    color: #fffdfd;
-}
-
 .button__shape {
     padding-left: 15px;
 }
-
 
 .intro__description {
     display: grid;
@@ -337,13 +382,11 @@ body {
 
 
 /* Блок ABOUT */
-
 .about {
     grid-area: about;
     display: grid;
     grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
     grid-template-areas: ". about__block .";
-    padding-bottom: 120px;
 }
 
 .about__block {
@@ -388,8 +431,6 @@ body {
 
 .about__title {
     color: #9e9d9d;
-    /* font-weight: 300;
-    font-size: 64px; */
 }
 
 .about__text {
@@ -404,28 +445,12 @@ body {
     margin-left: 30px;
 }
 
-
-
-
 /* Конец ABOUT */
 
 /* Блок FOCUS*/
-.subtitle {
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 85%;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #BDBDBD;
-    margin-top: 0px;
-    margin-bottom: 60px;
-}
-
 .focus {
     grid-area: focus;
     display: grid;
-    margin-bottom: 120px;
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1170px) minmax(1rem, 1fr);
     grid-template-areas:
         ". focus_subtitle ."
@@ -439,60 +464,41 @@ body {
 .focus__container {
     grid-area: focus__container;
     display: grid;
-    grid-template: 1fr / 10.5% 37.5% 14.5% 37.5%;
-    align-items: stretch;
-}
-
-
-.focus__number_1 {
-    grid-area: 1/1/2/2;
+    gap: 30px;
+    grid-template: 1fr / 40% 60%;
+    grid-template-areas:
+        "focus_text_1 focus_text_2";
 }
 
 .focus_text_1 {
-    grid-area: 1/2/2/3;
-}
-
-.focus__number_2 {
-    grid-area: 1/3/2/4;
+    grid-area: focus_text_1;
+    display: flex;
+    align-items: center;
 }
 
 .focus_text_2 {
-    grid-area: 1/4/2/5;
+    grid-area: focus_text_2;
+    display: flex;
+    align-items: center;
 }
 
-.text {
-    font-family: 'Roboto', sans-serif;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-    text-align: left;
-    color: #333333;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-right: 10px;
-}
-
-.number {
-    font-family: 'Roboto', sans-serif;
-    font-size: 200px;
-    font-style: normal;
+.focus_text_1::before{
+    content: "1";
+    font-size: 150px;
     font-weight: 900;
-    line-height: 70%;
-    text-align: center;
     color: #F2F2F2;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    display: inline-block;
+    padding-right: 50px;
 }
 
-.subtitle {
-    font-size: 64px;
-    font-weight: 300;
-    line-height: 64px;
-    text-align: left;
-    font-weight: 300;
-    color: #BDBDBD;
-}
+.focus_text_2::before{
+    content: "2";
+    font-size: 150px;
+    font-weight: 900;
+    color: #F2F2F2;
+    display: inline-block;
+    padding-right: 50px;
+    }
 
 @media screen and (max-width: 767px) {
     .focus {
@@ -504,15 +510,39 @@ body {
             ". focus__container .";
     }
 
-    .number {
-        font-size: 150px;
+    .focus__container {
+        grid-area: focus__container;
+        display: grid;
+        gap: 5px;
+        grid-template: 1fr 1rem 1fr/ minmax(auto, 450px);
+        grid-template-areas:
+            "focus_text_1"
+            "."
+            "focus_text_2";
     }
+
+    .focus_text_1::before{
+        content: "1";
+        font-size: 100px;
+        font-weight: 900;
+        color: #F2F2F2;
+        display: inline-block;
+        padding-right: 25px;
+    }
+
+    .focus_text_2::before{
+        content: "2";
+        font-size: 100px;
+        font-weight: 900;
+        color: #F2F2F2;
+        display: inline-block;
+        padding-right: 25px;
+        }
 
     .text {
         font-size: 16px;
         margin-top: 0px;
         margin-bottom: 0px;
-        padding-right: 10px;
     }
 }
 
@@ -527,7 +557,6 @@ body {
         ". projects_subtitle ."
         ". projects_presentation ."
         ". projects_button .";
-    margin-bottom: 120px;
 }
 
 .projects_subtitle {
@@ -562,17 +591,6 @@ body {
     grid-area: 2/9/3/13;
 }
 
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card {
-    transition: all 0.3s ease-out;
-    overflow: hidden;
-}
-
 .card {
     transition: all 0.3s ease-out;
     display: inline-block;
@@ -581,6 +599,12 @@ body {
     height: 100%;
     width: 100%;
     height: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card__info {
@@ -627,9 +651,6 @@ body {
 
 .card:hover img {
     transition: all 0.3s ease-out;
-}
-
-.card:hover img {
     transform: scale(1.2, 1.2);
 }
 
@@ -648,7 +669,6 @@ body {
             ". projects_presentation ."
             ". projects_button .";
     }
-
 
     .projects_subtitle {
         grid-area: projects_subtitle;
@@ -703,12 +723,10 @@ body {
         ". contact-form__subtitle contact-form__subtitle contact-form__subtitle ."
         ". contact-form__inputs . contact-form__image ."
         ". contact-form__inputs . . .";
-    margin-bottom: 120px;
 }
 
 .contact-form__subtitle {
     grid-area: contact-form__subtitle;
-    margin-bottom: 20px;
 }
 
 .contact-form__inputs {
@@ -772,19 +790,6 @@ body {
     margin-bottom: 21px;
 }
 
-.contact-form__button {
-    background-color: #333333;
-    border: none;
-    font-size: 12px;
-    font-weight: 200;
-    color: #fffdfd;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    line-height: 85%;
-    padding: 30px 47px;
-    justify-self: start;
-}
-
 @media screen and (max-width: 767px) {
     .contact-form__image {
         display: none;
@@ -803,7 +808,6 @@ body {
 /* Конец CONTACT-FORM*/
 
 /* блок FOOTER*/
-
 
 .footer {
     justify-self: center;
@@ -880,7 +884,6 @@ body {
     text-decoration: none;
 }
 
-
 .footer__contacts-icon {
     margin-right: 19px;
 }
@@ -898,7 +901,6 @@ body {
 
 
 @media screen and (max-width: 1023px) {
-
     .footer {
         width: 100%;
         display: grid;
@@ -924,9 +926,7 @@ body {
     }
 }
 
-
 /* конец FOOTER */
-
 
 
 /* ==GALLERY===============================================================*/
@@ -969,7 +969,6 @@ body {
     padding-top: 30px;
     border-top: 1px solid rgba(242, 242, 242, 1);
 }
-
 
 .photo {
     width: 210px;
@@ -1023,7 +1022,6 @@ body {
     color: #333333;
     padding: 22px 17px;
     border: 1px solid #F3F3F3;
-
 }
 
 .arrow:active {
@@ -1074,7 +1072,6 @@ body {
     height: 230px;
     /* padding-bottom: 50px; */
 }
-
 
 /* == Конец Certifications page ====================================== */
 
@@ -1142,7 +1139,6 @@ body {
 .popup__content img {
     max-width: 142px;
 }
-
 
 .popup__close {
     position: absolute;
