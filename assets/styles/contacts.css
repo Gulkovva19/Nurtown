@@ -7,14 +7,14 @@
         ". contact-wrraper .";
 }
 
-<<<<<<< HEAD .main .contact-wrraper {
+HEAD .main .contact-wrraper {
     max-height: 500px;
 }
 
-=======.contact-wrraper {
+.contact-wrraper {
     grid-area: contact-wrraper;
     height: 500px;
-    >>>>>>>2336ae21a8c07305a240d99c6de72ab089c20057 width: 100%;
+    width: 100%;
     display: grid;
     padding-bottom: 120px;
     padding-top: 3px;
@@ -110,15 +110,6 @@
 }
 
 @media screen and (max-width: 767px) {
-    .main {
-        width: 80%;
-        height: auto;
-        background: #FFFFFF;
-        margin: auto;
-        padding-bottom: 30px;
-        padding-top: 3px;
-    }
-
     .main h1 {
         margin: 13px 0 0 0;
         max-height: 90px;
@@ -188,17 +179,17 @@
 
     .main .contact-wrraper .map {
         border: 1px solid black;
-        width: 80%;
+        width: 90%;
         /* max-width: 555px; */
         height: auto;
-        max-height: 20vh;
+        max-height: 25vh;
         overflow: hidden;
         margin-top: 13px;
     }
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 1050px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .main {
         width: 80%;
         height: auto;
@@ -285,201 +276,202 @@
         overflow: hidden;
         margin-top: 13px;
     }
+}
 
-    /* == Pop-Up Question ================================================ */
-    .popup {
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        opacity: 0;
-        visibility: hidden;
-        overflow-y: auto;
-        overflow-x: hidden;
-        transition: all 0.8s ease 0s;
-    }
+/* == Pop-Up Question ================================================ */
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
 
-    .popup__area {
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-    }
+.popup__area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
 
-    .popup:target {
-        opacity: 1;
-        visibility: visible;
-    }
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
 
-    .popup:target .popup__content {
-        transform: translate(0px, 0px);
-        opacity: 1;
-    }
+.popup:target .popup__content {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
 
-    .popup__body {
-        min-height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 30px 10px;
-    }
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
 
-    .popup__content {
-        background-color: #FFF;
-        color: black;
-        max-width: 520px;
-        padding: 30px;
-        position: relative;
-        transition: all 0.8s ease 0s;
-        opacity: 0;
-        transform: translate(0px, -100%);
-        text-align: center;
-    }
+.popup__content {
+    background-color: #FFF;
+    color: black;
+    max-width: 520px;
+    padding: 30px;
+    position: relative;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: translate(0px, -100%);
+    text-align: center;
+}
 
-    .popup__close {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        font-size: 20px;
-        color: black;
-        text-decoration: none;
-    }
+.popup__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
 
-    body {
-        height: 100%;
-        font-family: 'Roboto', sans-serif;
-        font-size: 22px;
-        font-weight: 400;
-        height: 590px;
-    }
+body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    height: 590px;
+}
 
-    .contact-form {
-        display: grid;
-        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 469px) minmax(1rem, 1fr);
-        grid-template-areas:
-            ". contact-form__subtitle ."
-            ". contact-form__inputs ."
-            ". contact-form__inputs .";
-    }
+.contact-form {
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 469px) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". contact-form__subtitle ."
+        ". contact-form__inputs ."
+        ". contact-form__inputs .";
+}
 
-    .contact-form__subtitle {
-        grid-area: contact-form__subtitle;
-    }
+.contact-form__subtitle {
+    grid-area: contact-form__subtitle;
+}
 
-    .contact-form__inputs {
-        grid-area: contact-form__inputs;
-    }
-
-
-    .contact-form__button {
-        grid-area: contact-form__button;
-        justify-self: center;
-    }
-
-    .contact-input {
-        background-color: #F3F3F3;
-        border: none;
-        color: #8D8D8D;
-        font-size: 14px;
-        font-weight: 400;
-        width: 391px;
-        padding-top: 14px;
-        padding-bottom: 14px;
-        padding-left: 21px;
-        padding-right: 0px;
-        margin-bottom: 10px;
-        box-sizing: border-box;
-
-    }
-
-    .contact-input_big {
-        background-color: #F3F3F3;
-        border: none;
-        color: #8D8D8D;
-        font-size: 14px;
-        font-weight: 400;
-        width: 391px;
-        padding-top: 14px;
-        padding-bottom: 14px;
-        padding-left: 21px;
-        resize: none;
-        box-sizing: border-box;
-    }
+.contact-form__inputs {
+    grid-area: contact-form__inputs;
+}
 
 
-    .contact-form__privacy {
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 17px;
-        letter-spacing: 0.03em;
-        text-align: center;
-        color: #333333;
-        margin-top: 21px;
-        margin-bottom: 21px;
-    }
+.contact-form__button {
+    grid-area: contact-form__button;
+    justify-self: center;
+}
 
-    .contact-form__button {
-        background-color: #333333;
-        width: 391px;
-        border: none;
-        font-size: 12px;
-        font-weight: 200;
-        color: #fffdfd;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        line-height: 85%;
-        padding: 30px 47px;
+.contact-input {
+    background-color: #F3F3F3;
+    border: none;
+    color: #8D8D8D;
+    font-size: 14px;
+    font-weight: 400;
+    width: 391px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 21px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 
-    }
+}
 
-    /* == Pop-Up Спасибо ================================================ */
-    .popup__content img {
-        max-width: 142px;
-    }
-
-    .popup__title {
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 92%;
-        letter-spacing: 0.03em;
-        margin-top: 24px;
-        margin-bottom: 27px;
-        color: #333333;
-    }
-
-    .popup__text {
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 900;
-        line-height: 158%;
-        letter-spacing: 0.03em;
-        color: #4F4F4F;
-        margin-bottom: 41px;
-    }
-
-    .button_black {
-        background-color: #333333;
-        border: none;
-        font-size: 12px;
-        font-weight: 200;
-        color: #fffdfd;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        line-height: 85%;
-        padding: 30px 47px;
-        display: inline-block;
-    }
-
-    .button_black a {
-        text-decoration: none;
-        color: #fffdfd;
-    }
+.contact-input_big {
+    background-color: #F3F3F3;
+    border: none;
+    color: #8D8D8D;
+    font-size: 14px;
+    font-weight: 400;
+    width: 391px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 21px;
+    resize: none;
+    box-sizing: border-box;
+}
 
 
-    .button_black:hover {
-        background: #525252;
-    }
+.contact-form__privacy {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: #333333;
+    margin-top: 21px;
+    margin-bottom: 21px;
+}
+
+.contact-form__button {
+    background-color: #333333;
+    width: 391px;
+    border: none;
+    font-size: 12px;
+    font-weight: 200;
+    color: #fffdfd;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    line-height: 85%;
+    padding: 30px 47px;
+
+}
+
+/* == Pop-Up Спасибо ================================================ */
+.popup__content img {
+    max-width: 142px;
+}
+
+.popup__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 92%;
+    letter-spacing: 0.03em;
+    margin-top: 24px;
+    margin-bottom: 27px;
+    color: #333333;
+}
+
+.popup__text {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 158%;
+    letter-spacing: 0.03em;
+    color: #4F4F4F;
+    margin-bottom: 41px;
+}
+
+.button_black {
+    background-color: #333333;
+    border: none;
+    font-size: 12px;
+    font-weight: 200;
+    color: #fffdfd;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    line-height: 85%;
+    padding: 30px 47px;
+    display: inline-block;
+}
+
+.button_black a {
+    text-decoration: none;
+    color: #fffdfd;
+}
+
+
+.button_black:hover {
+    background: #525252;
+}
