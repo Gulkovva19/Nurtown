@@ -125,7 +125,7 @@ body {
     z-index: 50;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr minmax(auto, 400px) minmax(auto, 720px) minmax(auto, 50px) 1fr;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 400px) minmax(auto, 720px) minmax(auto, 50px) minmax(1rem, 1fr);
     grid-template-areas:
         ". header__logo header__menu header__burger .";
 }
@@ -330,7 +330,7 @@ body {
 .intro {
     grid-area: intro;
     display: grid;
-    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1170px) minmax(1rem, 1fr);
     grid-template-areas:
         ". intro__block .";
 }
@@ -404,7 +404,7 @@ body {
 .about {
     grid-area: about;
     display: grid;
-    grid-template-columns: 1fr minmax(auto, 1170px) 1fr;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1170px) minmax(1rem, 1fr);
     grid-template-areas: ". about__block .";
 }
 
