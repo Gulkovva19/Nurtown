@@ -184,7 +184,7 @@ body {
 
 .contact-form__button {
     grid-area: contact-form__button;
-    justify-self: start;
+    justify-self: center;
 }
 
 .contact-input {
@@ -224,7 +224,7 @@ body {
     font-weight: 400;
     line-height: 17px;
     letter-spacing: 0.03em;
-    text-align: left;
+    text-align: center;
     color: #333333;
     margin-top: 21px;
     margin-bottom: 21px;
@@ -241,7 +241,7 @@ body {
     text-transform: uppercase;
     line-height: 85%;
     padding: 30px 47px;
-    justify-self: start;
+
 }
 
 /* == Pop-Up Спасибо ================================================ */
@@ -279,7 +279,7 @@ body {
     text-transform: uppercase;
     line-height: 85%;
     padding: 30px 47px;
-    justify-self: right;
+    display: inline-block;
 }
 
 .button_black a {
