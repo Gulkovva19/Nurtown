@@ -94,6 +94,10 @@ body {
     color: #fffdfd;
 }
 
+
+.button_black:hover {
+    background: #525252;
+}
 /*==HEADER===================================================*/
 .header {
     grid-area: header;

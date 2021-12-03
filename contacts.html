@@ -45,7 +45,7 @@
 
         <main class="main">
             <div class="contact-wrraper">
-                <div class="contacts">
+                <div class="contacts" id="contact-form">
                     <h1><span style="font-weight: 300; color: #BDBDBD;">Contact</span>
                         <span style="font-weight: 700; color: #333333;">Information</span>
                     </h1>
@@ -55,7 +55,7 @@
                     </div>
                     <a class="phone" href="tel:+15120009222">+1 512-000-9222</a>
                     <a class="email" href="mailto:info@nurtown.com">info@nurtown.com</a>
-                    <a class="button" href="">Contact us</a> <!-- ссылка на pop Задать вопрос -->
+                    <a class="button" href="#popup-question">Contact us</a> <!-- ссылка на pop Задать вопрос -->
                 </div>
                 <div class="map">
                     <iframe
@@ -124,7 +124,59 @@
                 </div>
             </div>
         </footer>
+    </div>
 
+    <div id="popup-question" class="popup">
+        <a href="#contact-form" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content contact-form">
+                <a href="#contact-form" class="popup__close">X</a>
+                <h2 class="contact-form__subtitle">Ask a question</h2>
+                <form class="contact-form__inputs" action="#" method="get">
+                    <div>
+                        <input class="contact-input" type="text" name="username" value="" placeholder="Name" tabindex="1" />
+                    </div>
+                    <div>
+                        <input class="contact-input" type="tel" name="userphone" value="" placeholder="Phone number"
+                                tabindex="2" required />
+                    </div>
+                    <div>
+                        <input class="contact-input" type="text" name="usermail" value="" placeholder="E-mail" tabindex="3"
+                                required />
+                    </div>
+                    <div>
+                        <input class="contact-input" type="text" name="servicetype" value="" placeholder="Service"
+                                tabindex="4" />
+                    </div>
+                    <div>
+                        <textarea class="contact-input_big" name="comment" id="" cols="30" rows="8" placeholder="Message"
+                                tabindex="5" required></textarea>
+                    </div>
+                    <div class="contact-form__privacy">
+                        <p><input type="checkbox" name="privacy" value="OK" tabindex="6" required /> You agree to the privacy
+                                policy</p>
+                    </div>
+                    <div class="contact-form__button" type="submit" tabindex="7"><a href="#popup_spasibo">
+                            Send Message<img class="button__shape" src="./assets/images/main_page/ico_shape_white.svg"
+                                alt="arrow-icon"></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup_spasibo" class="popup">
+        <a href="#contact-form" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#contact-form" class="popup__close">X</a>
+                <img src="assets/images/popup-success.png" alt="">
+                <div class="popup__title">Your message has been sent!</div>
+                <div class="popup__text">Thank you for getting in touch, we always try our best to respond as soon as possible, you can expect a reply in at most 48 hours.</div>
+                <div class="popup__button button_black"><a href="#contact-form">Back</a>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
