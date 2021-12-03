@@ -9,7 +9,7 @@
 }
 
 .main .contact-wrraper {
-    height: 500px;
+    max-height: 500px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -19,7 +19,7 @@
 }
 
 .main .contact-wrraper .contacts {
-    width: 340px;
+    max-width: 340px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,20 +36,31 @@
 
 .main h1 {
     margin: 63px 0 0 0;
-    height: 128px;
-    width: 338px;
+    max-height: 128px;
+    max-width: 338px;
     font-family: 'Roboto', sans-serif;
     font-size: 64px;
     line-height: 64px;
 }
 
-.main p {
+.main span.nameCompany {
+    display: inline-block;
     margin: 0;
     width: 280px;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 22px;
     font-weight: 700;
+}
+
+.main span.addressCompany {
+    display: inline-block;
+    padding-top: 10px;
+    width: 280px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
 }
 
 .main a.phone {
@@ -90,4 +101,182 @@
 
 .main a.button:hover {
     background: #525252;
+}
+
+@media screen and (max-width: 767px) {
+    .main {
+        width: 80%;
+        height: auto;
+        background: #FFFFFF;
+        margin: auto;
+        padding-bottom: 30px;
+        padding-top: 3px;
+    }
+
+    .main h1 {
+        margin: 13px 0 0 0;
+        max-height: 90px;
+        max-width: 240px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 6vw;
+        line-height: 85%;
+    }
+
+    .main span.nameCompany {
+        margin-top: 20px;
+        width: 260px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 4vw;
+        line-height: 85%;
+        font-weight: 700;
+    }
+
+    .main span.addressCompany {
+        /* padding-top: 2px; */
+        width: 280px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 3vw;
+        line-height: 85%;
+        font-weight: 300;
+    }
+
+    .main a.phone {
+        margin-top: 13px;
+        width: 220px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 4vw;
+        line-height: 85%;
+        font-weight: 700;
+        color: #333333;
+        text-decoration: none;
+    }
+
+    .main a.email {
+        margin-top: 13px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2vw;
+        line-height: 85%;
+        font-weight: 300;
+        color: #333333;
+        text-decoration: none;
+    }
+
+    .main a.button {
+        margin-top: 13px;
+        background: black;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        width: 111px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1vw;
+        line-height: 85%;
+        font-weight: 400;
+        padding: 15px 0 15px 0;
+    }
+
+    .main a.button:hover {
+        background: #525252;
+    }
+
+    .main .contact-wrraper .map {
+        border: 1px solid black;
+        width: 80%;
+        /* max-width: 555px; */
+        height: auto;
+        max-height: 20vh;
+        overflow: hidden;
+        margin-top: 13px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1050px) {
+    .main {
+        width: 80%;
+        height: auto;
+        background: #FFFFFF;
+        margin: auto;
+        padding-bottom: 60px;
+        padding-top: 5px;
+    }
+
+    .main h1 {
+        margin: 23px 0 0 0;
+        max-height: 90px;
+        max-width: 450px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 5vw;
+        line-height: 85%;
+    }
+
+    .main span.nameCompany {
+        margin-top: 30px;
+        /* padding-top: 5px; */
+        width: 250px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 3vw;
+        line-height: 85%;
+        font-weight: 700;
+    }
+
+    .main span.addressCompany {
+        /* padding-top: 2px; */
+        width: 300px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2vw;
+        line-height: 85%;
+        font-weight: 300;
+    }
+
+    .main a.phone {
+        margin-top: 30px;
+        width: 220px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        line-height: 2.5vh;
+        font-weight: 700;
+        color: #333333;
+        text-decoration: none;
+    }
+
+    .main a.email {
+        margin-top: 30px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2vw;
+        line-height: 85%;
+        font-weight: 300;
+        color: #333333;
+        text-decoration: none;
+    }
+
+    .main a.button {
+        margin-top: 13px;
+        background: black;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        max-width: 111px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1vw;
+        line-height: 85%;
+        font-weight: 400;
+        padding: 15px 0 15px 0;
+    }
+
+    .main a.button:hover {
+        background: #525252;
+    }
+
+    .main .contact-wrraper .map {
+        border: 1px solid black;
+        width: 80%;
+        /* max-width: 555px; */
+        height: auto;
+        max-height: 20vh;
+        overflow: hidden;
+        margin-top: 13px;
+    }
 }
