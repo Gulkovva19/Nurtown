@@ -437,12 +437,13 @@ body {
         background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
-        max-width: 903px;
         margin-left: 0px;
         overflow: hidden;
-        height: 80vh;
+        height: 100%;
+        width: 100%;
         justify-content: space-evenly;
         align-self: center;
+        justify-self: center;
     }
 
     .subtitle_cover {
