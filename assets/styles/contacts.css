@@ -7,7 +7,7 @@
         ". contact-wrraper .";
 }
 
-.main .contact-wrraper {
+HEAD .main .contact-wrraper {
     max-height: 500px;
 }
 
@@ -282,7 +282,7 @@
 .popup {
     position: fixed;
     left: 0;
-    top: 0;
+    top: 10vh;
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
