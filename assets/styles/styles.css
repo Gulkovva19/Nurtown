@@ -436,14 +436,15 @@ body {
     .intro__image {
         background-image: url("../images/main_page/main_image.png");
         background-repeat: no-repeat;
+        object-fit: cover;
         display: flex;
         flex-direction: column;
-        margin-left: 0px;
         overflow: hidden;
-        height: 100%;
+        height: auto;
         width: 100%;
         justify-content: space-evenly;
         align-self: center;
+        margin-left: 7%;
     }
 
     .subtitle_cover {
@@ -460,7 +461,8 @@ body {
 
     .intro__button {
         max-width: 222px;
-        margin-top: 30%;
+        margin-top: 50%;
+        margin-bottom: 5%;
         margin-left: 50px;
     }
 }
