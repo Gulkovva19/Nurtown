@@ -416,36 +416,100 @@ body {
 }
 
 @media screen and (max-width:1023px) {
+    .intro {
+        grid-area: intro;
+        display: grid;
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 903px) minmax(1rem, 1fr);
+        grid-template-areas:
+        ". intro__block .";
+    }
+
+    .intro__block {
+        grid-area: intro__block;
+    }
+
     .intro__description {
         display: none;
     }
 
     .intro__image {
         background-image: url("../images/main_page/main_image.png");
-        height: 829px;
-        width: 70%;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        /* align-items: flex-end; */
-        /* justify-content: flex-start; */
-        margin-left: 60px;
-        max-width: 770px;
-        /* overflow: hidden; */
+        max-width: 903px;
+        margin-left: 0px;
+        overflow: hidden;
+        height: 80vh;
+        justify-content: space-evenly;
+        align-self: center;
+    }
+
+    .subtitle_cover {
+        font-size: 64px;
+        align-self: center;
+        color: rgb(247, 247, 247);
     }
 
     .intro__title_cover {
         font-size: 64px;
-        align-self: flex-end;
-    }
-
-    .subtitle_cover {
-        color: rgb(247, 247, 247);
+        align-self: center;
+        color: #333333;
     }
 
     .intro__button {
-        align-content: flex-end;
         max-width: 222px;
+        margin-top: 30%;
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .intro {
+        grid-area: intro;
+        display: grid;
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 747px) minmax(1rem, 1fr);
+        grid-template-areas:
+        ". intro__block .";
+    }
+
+    .intro__block {
+        grid-area: intro__block;
+    }
+
+    .intro__description {
+        display: none;
+    }
+
+    .intro__image {
+        display: flex;
+        flex-direction: column;
+        max-width: 747px;
+        height: 100%;
+        margin-left: 0px;
+        width: 100%;
+        overflow: hidden;
+        height: 82vh;
+        justify-content: space-evenly;
+    }
+
+    .subtitle_cover {
+        font-size: 44px;
+        align-self: center;
+        color: rgb(247, 247, 247);
+    }
+
+    .intro__title_cover {
+        font-size: 44px;
+        align-self: center;
+        color: #333333;
+    }
+
+    .intro__button {
+        padding: 20px 27px;
+        max-width: 172px;
+        margin-top: 50%;
+        align-self: center;
     }
 }
 
