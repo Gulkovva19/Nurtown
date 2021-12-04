@@ -426,6 +426,7 @@ body {
 
     .intro__block {
         grid-area: intro__block;
+        justify-items: center;
     }
 
     .intro__description {
@@ -443,7 +444,6 @@ body {
         width: 100%;
         justify-content: space-evenly;
         align-self: center;
-        justify-self: center;
     }
 
     .subtitle_cover {
@@ -581,6 +581,7 @@ body {
     .about__description {
         width: 100%;
         margin-left: 30px;
+        margin-right: 30px;
     }
 }
 
