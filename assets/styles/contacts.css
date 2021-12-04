@@ -7,7 +7,7 @@
         ". contact-wrraper .";
 }
 
-HEAD .main .contact-wrraper {
+.main .contact-wrraper {
     max-height: 500px;
 }
 
