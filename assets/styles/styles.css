@@ -840,6 +840,26 @@ body {
     margin-top: 30px;
 }
 
+@media screen and (max-width: 1024px) {
+.projects__card_one .card__info {
+    transform: translateX(0);
+}
+
+.projects__card_one img {
+    transition: all 0.3s ease-out;
+    transform: scale(1.2, 1.2);
+}
+
+.projects__card_one .card__info h3 {
+    font-size: 24px;
+}
+
+.projects__card_one .card__info a p {
+    font-size: 10px;
+    margin: 6px 0;
+}
+}
+
 @media screen and (max-width: 767px) {
     .projects {
         grid-area: projects;
@@ -890,24 +910,6 @@ body {
 
     .projects__card_five {
         grid-area: projects__card_five;
-    }
-
-    .projects__card_one .card__info {
-        transform: translateX(0);
-    }
-
-    .projects__card_one img {
-        transition: all 0.3s ease-out;
-        transform: scale(1.2, 1.2);
-    }
-
-    .projects__card_one .card__info h3 {
-        font-size: 24px;
-    }
-
-    .projects__card_one .card__info a p {
-        font-size: 10px;
-        margin: 6px 0;
     }
 }
 
