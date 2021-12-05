@@ -326,6 +326,11 @@ body {
     margin-bottom: 120px;
 }
 
+@media screen and (max-width: 1024px) {
+    .contact-form {
+        margin-bottom: 10px;
+    }
+}
 
 @media screen and (max-width: 767px) {
 
