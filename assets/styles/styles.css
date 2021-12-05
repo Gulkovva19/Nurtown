@@ -1184,12 +1184,13 @@ body {
 
     .gallery__title {
         padding-left: 5vw;
-        margin: 0;
+        margin-bottom: 3vh;
     }
 
     .gallery__photo {
         gap: 15px;
         margin-left: 5vw;
+        padding-top: 3vh;
     }
 
     .gallery__slide {
