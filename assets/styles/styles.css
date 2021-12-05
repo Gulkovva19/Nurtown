@@ -55,6 +55,7 @@ body {
 
 @media screen and (max-width: 767px) {
     .subtitle {
+        font-size: 44px;
         padding-bottom: 20px;
     }
 }
