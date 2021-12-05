@@ -384,12 +384,11 @@ body {
         font-size: 64px;
     }
 
-    /* .intro__title_gray {
-        color: #9e9d9d;
-        font-weight: 300;
+    .intro__title {
+        color: #333333;
         font-size: 64px;
+    }
 
-    } */
 
     .intro__slide {
         align-self: center;
