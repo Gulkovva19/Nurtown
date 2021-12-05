@@ -1273,10 +1273,10 @@ body {
 }
 
 .slide-arrow {
-    max-width: 297px;
+    max-width: 150px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;;
 }
 
 .slide-arrow .button__slide {
