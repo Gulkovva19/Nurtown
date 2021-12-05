@@ -1111,11 +1111,11 @@ body {
     }
 
     .footer__contacts {
-        justify-self: center;
+        text-align: center;
     }
 
     .footer__social {
-        justify-self: center;
+        text-align: center;
     }
 
     .footer__logo {
@@ -1125,6 +1125,28 @@ body {
     .footer__information {
         display: none;
     }
+
+    @media screen and (max-width: 677px) {
+        .footer {
+            width: 100%;
+            display: grid;
+            grid-template-columns: minmax(1rem, 1fr) minmax(auto, 322px) minmax(auto, 325px) minmax(1rem, 1fr);
+            grid-template-areas:
+                ". contacts social .";
+        }
+
+        .footer__networks {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .footer__networks-icon {
+            justify-content: center;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
 }
 
 /* конец FOOTER */
