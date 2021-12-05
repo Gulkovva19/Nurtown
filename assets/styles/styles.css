@@ -1105,9 +1105,9 @@ body {
     .footer {
         width: 100%;
         display: grid;
-        grid-template-columns: minmax(auto, 510px) minmax(auto, 513px);
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 495px) minmax(auto, 498px) minmax(1rem, 1fr);
         grid-template-areas:
-            "contacts social";
+            ". contacts social .";
     }
 
     .footer__contacts {
@@ -1125,12 +1125,13 @@ body {
     .footer__information {
         display: none;
     }
+}
 
-    @media screen and (max-width: 677px) {
+    @media screen and (max-width: 767px) {
         .footer {
             width: 100%;
             display: grid;
-            grid-template-columns: minmax(1rem, 1fr) minmax(auto, 322px) minmax(auto, 325px) minmax(1rem, 1fr);
+            grid-template-columns: minmax(1rem, 1fr) minmax(auto, 323px) minmax(auto, 325px) minmax(1rem, 1fr);
             grid-template-areas:
                 ". contacts social .";
         }
