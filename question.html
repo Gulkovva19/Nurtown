@@ -15,7 +15,7 @@
     <div class="contact-form">
         <h2 class="contact-form__subtitle">Ask a question</h2>
         <form class="contact-form__inputs" action="#" method="get">
-            <div>
+            <div> <!--немного спорный момент с наименованием, врде инпут отдельно от формы не будешь использовать, а значит это элемент contact-form__input -->
                 <input class="contact-input" type="text" name="username" value="" placeholder="Name" tabindex="1" />
             </div>
             <div>
@@ -32,7 +32,7 @@
             </div>
             <div>
                 <textarea class="contact-input_big" name="comment" id="" cols="30" rows="8" placeholder="Message"
-                    tabindex="5" required></textarea>
+                    tabindex="5" required></textarea><!--пустой id, валидатор ругается класс не по БЭМ правильно будет class="contact-input contact-input_big" сразу же видно что модификатор модициуирует )-->
             </div>
             <div class="contact-form__privacy">
                 <p><input type="checkbox" name="privacy" value="OK" tabindex="6" required /> You agree to the privacy
@@ -47,3 +47,5 @@
 </body>
 
 </html>
+
+<!--Прекрасная страница, все очень хорошо с адаптивностью -->

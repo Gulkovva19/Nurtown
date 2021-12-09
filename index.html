@@ -15,7 +15,7 @@
     <div class="wrapper">
 
         <header class="header">
-            <a href class="header__logo">
+            <a href class="header__logo"> <!--нет ссылки после href, на это указывает валидатор ;)-->
                 <img src="assets/images/logowithoutletters.svg" alt="company logo">
             </a>
             <nav class="header__menu menu">
@@ -40,18 +40,21 @@
             <div class="header__burger">
                 <span></span>
             </div>
+            <img src="" alt="описание фото"> <!--не прописан src="", картинка по сути не задана, а элемент есть на это тоже указывает валидатор ;) Лучше удалить то, что не нужно.-->
         </header>
 
 
-        <main class="main mainpage">
+        <main class="main mainpage"> <!--по моему mainpage здесь лишний, не нашла стилей на этот класс, зачем он? -->
 
             <div class="intro">
                 <div class="intro__block">
-                    <div class="intro__description">
+                    <div class="intro__description"><!--если это будет слайдер, то h1 заголовок получится не один на странице, но если его убрать - вообще странно получится, останутся только h2. Это огрехи дизайна, и для SEO это катастрофа, сайт не будет индексироваться. В этом случае есть несколько способов действия, что бы сайт котировался, и заголовки были как в макете
+                    1) потрясти дизайнера, и добиться таки что бы на странице был заголовок h1
+                    2) написать заголовок и спрятать его https://htmlacademy.ru/blog/boost/frontend/short-12 видео для информации как это сделать-->
                         <h1 class="intro__title"> <span class="subtitle"> PROJECT </span> <br /> NURTOWN</h1>
 
                         <div class="intro__slide slide-arrow">
-                            <a class="button__slide" href="http://127.0.0.1:5501/gallery.html">
+                            <a class="button__slide" href="http://127.0.0.1:5501/gallery.html"> <!--button__slide - не по БЭМ нет блока в котором этот элемент находится, как ножка от стола без стола  я бы рекомендовала исправить на intro__button-->
                                 <svg width="18" height="9" viewBox="0 0 18 9" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -79,6 +82,10 @@
                                 alt="strelochka"> -->
                             <!-- <img class="intro__slide_right" src="./assets/images/main_page/strelochka2.svg"
                                 alt="strelochka"> -->
+
+
+
+                                <!--ненужные комменты лучше убрать перед сдачей работы-->
                         </div>
 
                         <div class="intro__numbers numbers">
@@ -141,7 +148,8 @@
             <div class="focus">
                 <h2 class="focus_subtitle subtitle">Our Mission</h2>
                 <div class="focus__container">
-                    <div class="focus_text_1 text">
+                    <div class="focus_text_1 text"> <!--плохая практика использовать числа в качестве модификатора, 
+                    тем более число ничего не модифицирует, я бы назвала оба элемента focus__text. Но тогда как поставить цифры 1 и 2? при помощи псевдоклассов :last-child :first-child :nth-child() на выбор. При помощи псевдоклассов выбирай нужный элемент и потом сразу вешай псевдоэлемент .focus__text:last-child::before {} тогда не придется дублировать стили ) -->
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, lectus et facilisis
                         placerat.
                     </div>
@@ -153,14 +161,14 @@
             </div>
 
             <div class="projects">
-                <h2 class="projects_subtitle subtitle">Our Projects</h2>
-                <div class="projects_presentation">
+                <h2 class="projects_subtitle subtitle">Our Projects</h2> <!--projects_subtitle вижу модификатор блока projects, но по логике - это Элемент.  Придираюсь к недостатающей черточке __ =) -->
+                <div class="projects_presentation"><!--так же как и в предыдущем комментарии-->
                     <div class="projects__card_one card">
                         <a class="card__image" href="project1.html"><img src="assets/images/projects/project-1.png"
                                 alt=""></a>
                         <div class="card__info">
                             <a href="project1.html">
-                                <h3>Sample <br> Project</h3>
+                                <h3>Sample <br> Project</h3> 
                             </a>
                             <a href="project1.html">
                                 <p>View more →</p>
@@ -179,7 +187,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="projects__card_three card">
+                    <div class="projects__card_three card"><!--плохая практика использовать числа в качестве модификатора, и сейчас я вижу только написанный модификатор, но нет элемента который он модифицирует. Было бы правильно назвать все подобные элементы projects__card и изменить все остальные стили при помощи псевдоклассов :last-child :first-child :nth-child() на выбор. -->
                         <a class="card__image" href="project1.html"><img src="assets/images/projects/project-3.png"
                                 alt=""></a>
                         <div class="card__info">
@@ -191,7 +199,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="projects__card_four card">
+                    <div class="projects__card_four card"> 
                         <a class="card__image" href="project1.html"><img src="assets/images/projects/project-4.png"
                                 alt=""></a>
                         <div class="card__info">
@@ -243,15 +251,16 @@
                         <input class="contact-input" type="text" name="servicetype" value="" placeholder="Service"
                             tabindex="4" />
                     </div>
-                    <div>
-                        <textarea class="contact-input_big" name="comment" id="" cols="30" rows="8"
-                            placeholder="Message *" tabindex="5" required> </textarea>
+                    <div> 
+                        <textarea class="contact-input_big" name="comment" id="" cols="30" rows="8" 
+                            placeholder="Message *" tabindex="5" required> </textarea> <!--не прописан id="", валидатор выдает как ошибку, надо удалить-->
                     </div>
                     <div class="contact-form__privacy">
                         <p><input type="checkbox" name="privacy" value="OK" tabindex="6" required /> I have read and
                             agree to the privacy policy</p>
                     </div>
-                    <button class="contact-form__button button_black" type="submit" tabindex="7"><a
+                    <button class="contact-form__button button_black" type="submit" tabindex="7"><!--Error: The element a must not appear as a descendant of the button element. Причем, если изменить последовательность,обернуть кнопку в ссылку, то все равно будет такая же ошибка. В данном случае, ничего исправлять не надо, т.к. это ваша задумка, как сделать подтверждение отправки формы только силами CSS.  На будущее, в формах не надо ставить ссылки в кнопки )))) Но если надо по дизайну что бы ссылка была похожа на кнопку - надо сразу стилизовать тег ссылки <a> как кнопку. Но в данном случае, хоть валидатор и выдает ошибку - все верно-->
+                        <a
                             href="#popup_spasibo">
                             Send Message<img class="button__shape" src="./assets/images/main_page/ico_shape_white.svg"
                                 alt="arrow-icon"></a>
@@ -339,7 +348,30 @@
     </div>
 
     <script src="http://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script><!--JS - очень круто!-->
 </body>
 
 </html>
+
+<!--Работа получилась очень крутая! 
+    
+
+    В стилях осавила комментарий, найдете его по слову ревью, 
+    еще бы добавила 
+.wrapper {
+    min-width: 320px
+} тогда вся работа будет очень изящно уменьшаться на более мелких экранах. Проверьте =) 
+
+    Из резюме по всей работе целиком, будет здорово, если у вас получится не писать одинаковый код. Сейчас в работе 4 стиля для блока main (не только для него ). Для того, что бы не повторятся и вносить изменнеия как раз существуют модификаторы для блоков. Было бы здорово выдержать общие стили по всей работе 
+
+Здорово получаетс использовать псевдоклассы и псевдоэлементы, хорошо, что не боитесь их. На этой странице все отлично с адаптивностью (а это самая сложная часть работы, сетка и адаптивность)
+    Понравилось использвание БЭМ! были кое-какие огрехи, но это совсем не страшно ))) Да вообще нет страшных ощибок, все мелки, для улучшения стилистики вашего кода. 
+    Знаю, что прогоняли работу через валидатор, иначе было бы гораздо больше ошибок, но перед отправкой лучше посмотреть его еще раз. 
+
+    Понравился творческий подход к работе, то, что вас не остановило даже незнание JS! Как сделать появление попапа при отправке формы, я сама вижу в первый раз ) Круто! Но лучше делать это через JS тоже =))))) 
+
+
+    хорошо бы оформить файл README.MD - это паспорт работы, ее презентация, многие работодатели обращают на него внимание, как можно круто оформить этот файл 
+    что в нем писать https://techrocks.ru/2019/04/16/good-readme-on-github/
+    как это сделать красиво https://gist.github.com/Jekins/2bf2d0638163f1294637 у него тоже есть своя разметка. 
+;-->

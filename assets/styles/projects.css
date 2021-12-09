@@ -126,7 +126,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+} 
+/* если уберешь .main из этой конструкции, ничего не поменяется, а если поменяется, то не правильно назван элемент по БЭМ =)  */
 
 .main .slide-arrow .button__slide {
     border: 1px solid #DADADA;
