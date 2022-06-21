@@ -1,7 +1,6 @@
 .main {
     min-width: 80%;
     background: #FFFFFF;
-    /*подумать - цвет оставляет этот только main или body тоже*/
     margin: auto;
     max-height: 2450px;
     padding: 67px 0 120px 0;
@@ -26,7 +25,6 @@
 }
 
 .main .block-project .project {
-    /* border: 1px solid black; удалить после верстки блока */
     background: #FBFBFB;
     max-height: 435px;
     display: grid;
@@ -36,12 +34,6 @@
     gap: 30px;
 }
 
-/* .main .block-project .project img {
-    grid-area: 1/1/4/3;
-    background-size: cover;
-    height: 100%;
-    width: 100%;dffgdfgdghjdghjdh
-} */
 
 .main .block-project .project img {
     grid-area: 1/1/4/2;
@@ -94,10 +86,6 @@
     transform: scale(0.9);
 }
 
-/* .main .button:hover {
-    background:#F4F4F4;
-    box-shadow: 0 0 4px rgba(51, 51, 51, 0.3) inset;
-} */
 
 .main .slide-number__wrapper {
     max-width: 27%;
@@ -127,7 +115,7 @@
     flex-direction: row;
     justify-content: space-between;
 } 
-/* если уберешь .main из этой конструкции, ничего не поменяется, а если поменяется, то не правильно назван элемент по БЭМ =)  */
+
 
 .main .slide-arrow .button__slide {
     border: 1px solid #DADADA;
@@ -360,7 +348,6 @@
 
     .main .slide-number {
         min-width: 50%;
-        /* width: 160px; */
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
         font-size: 3vw;
