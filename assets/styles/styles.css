@@ -865,16 +865,16 @@ body {
             ". projects_button .";
     }
 
-    .projects_subtitle {
+    .projects__subtitle {
         grid-area: projects_subtitle;
     }
 
-    .projects_button {
+    .projects__button {
         grid-area: projects_button;
         justify-self: left;
     }
 
-    .projects_presentation {
+    .projects__presentation {
         grid-area: projects_presentation;
         display: grid;
         gap: 15px;
