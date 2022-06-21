@@ -693,12 +693,12 @@ body {
         gap: 5px;
         grid-template: 1fr 1rem 1fr/ minmax(auto, 450px);
         grid-template-areas:
-            "focus_text_1"
+            "focus_text_first"
             "."
-            "focus_text_2";
+            "focus_text_second";
     }
 
-    .focus_text_1::before {
+    .focus_text_first::before {
         content: "1";
         font-size: 100px;
         font-weight: 900;
@@ -707,7 +707,7 @@ body {
         padding-right: 25px;
     }
 
-    .focus_text_2::before {
+    .focus_text_second::before {
         content: "2";
         font-size: 100px;
         font-weight: 900;
