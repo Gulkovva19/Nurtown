@@ -42,39 +42,15 @@
             </div>
         </header>
 
-        <!-- <main class="main">
-            <div class="wrapper-project1">
-                <h1 class="project1__title"> <span class="subtitle">Sample</span> <br />Projekt 1</h1>
-            </div>
-            <svg class="long-line" width="1170" height="1" viewBox="0 0 1170 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="1170" height="1" fill="#F2F2F2"/>
-            </svg>
-                <div class="project1__wrapper">
-                <div class="project">
-                    <img class="image1" src="/assets/images/project1/project.png" alt="office room" />
-                </div>
-                <div class="project">
-                    <img class="image2" src="/assets/images/project1/project_part.png" alt="office room 2" />
-                    <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with.</p>
-                </div>
-                <div class="project">
-                    <img class="image1" src="/assets/images/project1/scheme.png" alt="office layout" />
-                </div>
-            </div>
-        </main> -->
 
         <main class="main">
-            <!-- <div class="wrapper-project1">
-                <h1 class="project1__title"> <span class="subtitle">Sample</span> <br />Projekt 1</h1>
-            </div> -->
-            <h1><span style="font-weight: 300; color: #BDBDBD;">Sample</span> <!--не гуд задавать стили в элементе, лучше брать общие css стили и добавлять свой модификатор-->
+            <h1><span style="font-weight: 300; color: #BDBDBD;">Sample</span> 
                 <span style="font-weight: 700; color: #333333;">Project 1</span>
             </h1>
             <svg class="long-line" width="1170" height="1" viewBox="0 0 1170 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="1170" height="1" fill="#F2F2F2"/>
             </svg>
-            <img class="image__big" src="/assets/images/project1/project.png" alt="office room" /><!--не по БЭМ, Лера, про это писать не буду больше6 что бы тебя не расстраивать ) Но здесь нет блока, есть только элемент (это когда отделяется __ , скорее big - это модификатор, тогда такое написание будет иметь право на существование, то тогда должен быть класс такой class="img img_big") ты модифицируешь блок img
-            Если будут трудности с пониманием бэма - напиши мне в личку, лучше всего разбирать на простом примере, а не как сейчас, сразу на сайте -->
+            <img class="image__big" src="/assets/images/project1/project.png" alt="office room" />
             <div class="project__details">
                 <img class="image__small" src="/assets/images/project1/project_part.png" alt="office room 2" />
                 <p class="project__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with.</p>
@@ -146,16 +122,3 @@
 </body>
 
 </html>
-
-<!-- к сожалению страница плохо адаптирована, когда экран расширяется - центральный блок тянется за ним, а шапка и подвал остаются на месте, текст наплывает на фотографию
-при ширине экрана 1107 и 952 - блок с текстом тоже не очень себя хорошо ведет. Жестко заданы настройки высоты, а если их отменить - все ломается. Так не должно быть. 
-еще есть нюанс, image__small деформируется при растягивании, для того что бы это исправить стоит использовать  css свойство object-fit https://developer.mozilla.org/ru/docs/Web/CSS/object-fit 
-что бы исправить ситуацию с текстом надо убрать жетские настройки у 
-.main .project__details {
-max-height: 435px убрать, а что бы смотрелось хорошо 
-.main .project__details p.project__text {
-    /* max-width: 720 - тоже убрать
-
-эту страничку стоит доработать, 
-
-Но в целом, на нужном размере экрана все смотрится очень хорошо. Осталось доделать адаптивность, и если будет желание - БЭМ-->
