@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-/*== ОБЩЕЕ ДЛЯ ВСЕГО ДОКУМЕНТА===============================*/
-/* - Позиционирование -------------------------------------- */
 html,
 body {
     height: 100%;
 }
 
 .wrapper {
-    /*общий контейнер для того, чтобы задать структуру страницы и для того, чтобы футер был прибит к низу страницы, даже если содержания совсем мало*/
     display: grid;
     min-height: 100%;
     grid-template-columns: 1fr;
@@ -19,7 +16,7 @@ body {
         "footer";
 }
 
-/* - Типографика ------------------------------------------- */
+
 html,
 body {
     font-family: 'Roboto', sans-serif;
@@ -27,7 +24,7 @@ body {
     font-weight: 400;
 }
 
-/* - Типографика ------------------------------------------- */
+
 .subtitle {
     font-size: 64px;
     font-style: normal;
@@ -60,7 +57,7 @@ body {
     }
 }
 
-/* - Оформление: ссылки, кнопки ---------------------------- */
+
 .button {
     background-color: white;
     border: none;
@@ -116,7 +113,7 @@ body {
 }
 
 
-/*==HEADER===================================================*/
+
 .header {
     grid-area: header;
     align-items: center;
@@ -156,7 +153,6 @@ body {
     max-width: 100%;
     object-fit: cover;
 } 
-/* .header__logo img  лучше так не делаль , хорошо задать класс для img - header__img, например, или сделать отдельным блоком logo. Такие стили жестко заданы и привязаны к определенному тегу. Но оговорюсь, что такой код имеет право на существование. Но если надо будет перенести картинку из логотипа в другое место - она становится неуправляемой и придется писать стили заново. ревью */
 
 .header__menu {
     grid-area: header__menu;
@@ -306,7 +302,7 @@ body {
     }
 }
 
-/*==СЕКЦИЯ MAIN - ОСНОВНАЯ СТРАНИЦА ================================================================*/
+
 .main {
     grid-area: main;
     display: grid;
@@ -344,7 +340,7 @@ body {
     }
 }
 
-/* Блок INTRO */
+
 
 @media screen and (min-width:1024px) {
     .intro {
@@ -523,10 +519,6 @@ body {
     }
 }
 
-/* Конец INTRO */
-
-
-/* Блок ABOUT */
 
 @media screen and (min-width:769px) {
     .about {
@@ -632,9 +624,7 @@ body {
     }
 }
 
-/* Конец ABOUT */
 
-/* Блок FOCUS*/
 .focus {
     grid-area: focus;
     display: grid;
@@ -733,9 +723,7 @@ body {
     }
 }
 
-/* Конец FOCUS*/
 
-/* Блок PROJECTS*/
 .projects {
     grid-area: projects;
     display: grid;
@@ -919,9 +907,6 @@ body {
     }
 }
 
-/* Конец PROJECTS*/
-
-/* Блок CONTACT-FORM*/
 .contact-form {
     grid-area: contact-form;
     display: grid;
@@ -1012,9 +997,7 @@ body {
     }
 }
 
-/* Конец CONTACT-FORM*/
 
-/* блок FOOTER*/
 
 .footer {
     justify-self: center;
@@ -1085,7 +1068,7 @@ body {
     font-weight: 500;
 }
 
-/* Кликабельные ссылки телефона и мейла */
+
 .footer__contacts-link {
     color: #F3F3F3;
     text-decoration: none;
@@ -1156,10 +1139,6 @@ body {
         }
 }
 
-/* конец FOOTER */
-
-
-/*=GALLERY=====================================================*/
 
 .main-gallery {
     grid-area: main;
@@ -1258,9 +1237,7 @@ body {
     }
 }
 
-/* == Конец Gallery=================================================== */
 
-/* == Начало Certifications page====================================== */
 
 .main-certifications {
     grid-area: main;
@@ -1355,9 +1332,7 @@ body {
     }
 }
 
-/* == Конец Certifications page ====================================== */
 
-/* == Начало Pop-Up Спасибо ================================================ */
 .popup {
     position: fixed;
     left: 0;
@@ -1448,4 +1423,3 @@ body {
     margin-bottom: 41px;
 }
 
-/* == Конец Pop-Up Спасибо ================================================ */
