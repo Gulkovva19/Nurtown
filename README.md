@@ -17,4 +17,4 @@ Host the parent directory on the webserver
 https://www.figma.com/community/file/891374608655348853
 
 ## Result:
-https://gulkovva19.github.io/Mogu-Travel/
+https://gulkovva19.github.io/first_project/
