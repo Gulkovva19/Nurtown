@@ -644,22 +644,22 @@ body {
     gap: 30px;
     grid-template: 1fr / 40% 60%;
     grid-template-areas:
-        "focus_text_1 focus_text_2";
+        "focus_text_first focus_text_second";
 }
 
-.focus_text_1 {
-    grid-area: focus_text_1;
+.focus_text_first {
+    grid-area: focus_text_first;
     display: flex;
     align-items: center;
 }
 
-.focus_text_2 {
-    grid-area: focus_text_2;
+.focus_text_second {
+    grid-area: focus_text_second;
     display: flex;
     align-items: center;
 }
 
-.focus_text_1::before {
+.focus_text_first::before {
     content: "1";
     font-size: 150px;
     font-weight: 900;
@@ -668,7 +668,7 @@ body {
     padding-right: 50px;
 }
 
-.focus_text_2::before {
+.focus_text_second::before {
     content: "2";
     font-size: 150px;
     font-weight: 900;
@@ -729,17 +729,17 @@ body {
     display: grid;
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1170px) minmax(1rem, 1fr);
     grid-template-areas:
-        ". projects_subtitle ."
-        ". projects_presentation ."
-        ". projects_button .";
+        ". projects__subtitle ."
+        ". projects__presentation ."
+        ". projects__button .";
 }
 
-.projects_subtitle {
-    grid-area: projects_subtitle;
+.projects__subtitle {
+    grid-area: projects__subtitle;
 }
 
-.projects_presentation {
-    grid-area: projects_presentation;
+.projects__presentation {
+    grid-area: projects__presentation;
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(12, minmax(60px, 1fr));
@@ -829,8 +829,8 @@ body {
     transform: scale(1.2, 1.2);
 }
 
-.projects_button {
-    grid-area: projects_button;
+.projects__button {
+    grid-area: projects__button;
     margin-top: 30px;
 }
 
@@ -860,22 +860,22 @@ body {
         display: grid;
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 747px) minmax(1rem, 1fr);
         grid-template-areas:
-            ". projects_subtitle ."
-            ". projects_presentation ."
-            ". projects_button .";
+            ". projects__subtitle ."
+            ". projects__presentation ."
+            ". projects__button .";
     }
 
     .projects__subtitle {
-        grid-area: projects_subtitle;
+        grid-area: projects__subtitle;
     }
 
     .projects__button {
-        grid-area: projects_button;
+        grid-area: projects__button;
         justify-self: left;
     }
 
     .projects__presentation {
-        grid-area: projects_presentation;
+        grid-area: projects__presentation;
         display: grid;
         gap: 15px;
         grid-template-columns: 40% 60%;
