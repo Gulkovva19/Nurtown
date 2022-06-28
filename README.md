@@ -1,4 +1,4 @@
-# Tutorial
+# Website for an architectural company
 
 <p>Responsive website for an architectural company</p>
 <img width="700" alt="Снимок экрана 2022-06-23 в 16 10 30" src="https://user-images.githubusercontent.com/91186108/175306493-2c2da33d-3d57-462c-94b5-0df7a87b4729.png">
